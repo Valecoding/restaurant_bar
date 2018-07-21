@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Clear_sansregular';
+    src: url('../fonts/ClearSans-Regular-webfont.eot');
+    src: url('../fonts/ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ClearSans-Regular-webfont.woff') format('woff'),
+    url('../fonts/ClearSans-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Clear_sansbold';
+    src: url('../fonts/ClearSans-Bold-webfont.eot');
+    src: url('../fonts/ClearSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ClearSans-Bold-webfont.woff') format('woff'),
+    url('../fonts/ClearSans-Bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroylight';
+    src: url('../fonts/10177.eot');
+    src: url('../fonts/10177.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/10177.woff2') format('woff2'),
+    url('../fonts/10177.woff') format('woff'),
+    url('../fonts/10177.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+
+@font-face {
+    font-family: 'Gilroyextrabold';
+    src: url('../fonts/10871.eot');
+    src: url('../fonts/10871.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/10871.woff2') format('woff2'),
+    url('../fonts/10871.woff') format('woff'),
+    url('../fonts/10871.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
