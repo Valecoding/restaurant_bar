@@ -2,434 +2,283 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>School Movie | Мой мир - моя школа!</title>
+    <title>Название сайта</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="favicon.ico"/> <!--todo сгенерировать иконску-->
     <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="libs/nav/component.css"/>
     <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/media.css"/>
 
 </head>
 <body>
-<header>
-        <nav>
-            <ul class="navbar container">
-                <li class="links">
-                    <ul>
-                        <li class="socials">
-                            <a href="https://www.whatsapp.com/">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
-
-	<path style="fill:currentColor;" d="M0,58l4.988-14.963C2.457,38.78,1,33.812,1,28.5C1,12.76,13.76,0,29.5,0S58,12.76,58,28.5
-		S45.24,57,29.5,57c-4.789,0-9.299-1.187-13.26-3.273L0,58z"/>
-	<path style="fill:#FFFFFF;" d="M47.683,37.985c-1.316-2.487-6.169-5.331-6.169-5.331c-1.098-0.626-2.423-0.696-3.049,0.42
-		c0,0-1.577,1.891-1.978,2.163c-1.832,1.241-3.529,1.193-5.242-0.52l-3.981-3.981l-3.981-3.981c-1.713-1.713-1.761-3.41-0.52-5.242
-		c0.272-0.401,2.163-1.978,2.163-1.978c1.116-0.627,1.046-1.951,0.42-3.049c0,0-2.844-4.853-5.331-6.169
-		c-1.058-0.56-2.357-0.364-3.203,0.482l-1.758,1.758c-5.577,5.577-2.831,11.873,2.746,17.45l5.097,5.097l5.097,5.097
-		c5.577,5.577,11.873,8.323,17.45,2.746l1.758-1.758C48.048,40.341,48.243,39.042,47.683,37.985z"/></svg>
-                            </a>
-
-                            <a href="https://telegram.org/">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                    <path style="fill:currentColor;"
-                                          d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/>
-                                </svg>
-                            </a>
-
-                            <a href="https://www.viber.com/">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
-	<path style="fill:currentColor;" d="M437.976,214.854c0.615-72.186-60.866-138.361-137.051-147.512c-1.515-0.18-3.166-0.453-4.913-0.743
-		c-3.772-0.625-7.672-1.267-11.607-1.267c-15.614,0-19.788,10.968-20.887,17.51c-1.069,6.36-0.049,11.701,3.024,15.882
-		c5.171,7.031,14.269,8.279,21.577,9.28c2.142,0.296,4.163,0.571,5.855,0.951c68.449,15.295,91.497,39.341,102.761,107.208
-		c0.275,1.658,0.399,3.702,0.531,5.869c0.491,8.113,1.515,24.991,19.661,24.991h0.002c1.511,0,3.134-0.13,4.824-0.388
-		c16.898-2.568,16.368-17.996,16.114-25.409c-0.072-2.088-0.14-4.063,0.037-5.376C437.95,215.519,437.974,215.186,437.976,214.854z"
-		/>
-	<path style="fill:currentColor;" d="M279.974,40.846c2.027,0.146,3.947,0.286,5.545,0.531c112.4,17.286,164.091,70.54,178.416,183.819
-		c0.243,1.926,0.281,4.274,0.321,6.761c0.143,8.85,0.437,27.262,20.21,27.643l0.614,0.006c6.201,0,11.134-1.87,14.662-5.562
-		c6.155-6.438,5.726-16.002,5.379-23.689c-0.084-1.886-0.165-3.662-0.145-5.217C506.405,109.283,406.12,4.226,290.369,0.32
-		c-0.48-0.016-0.938,0.01-1.401,0.075c-0.227,0.033-0.649,0.075-1.371,0.075c-1.154,0-2.574-0.1-4.08-0.202
-		C281.696,0.143,279.632,0,277.54,0c-18.434,0-21.938,13.102-22.386,20.912C254.12,38.963,271.582,40.233,279.974,40.846z"/>
-	<path style="fill:currentColor;" d="M458.511,371.602c-2.39-1.825-4.861-3.714-7.174-5.578c-12.272-9.876-25.328-18.979-37.955-27.783
-		c-2.62-1.825-5.241-3.652-7.852-5.484c-16.174-11.361-30.715-16.882-44.453-16.882c-18.504,0-34.636,10.224-47.951,30.384
-		c-5.899,8.938-13.056,13.283-21.876,13.283c-5.215,0-11.142-1.488-17.612-4.425c-52.207-23.674-89.486-59.972-110.803-107.886
-		c-10.305-23.158-6.964-38.295,11.172-50.615c10.299-6.99,29.469-20.003,28.111-44.922c-1.538-28.298-63.976-113.445-90.284-123.115
-		c-11.138-4.096-22.841-4.134-34.846-0.095C46.744,38.651,25.041,56.506,14.219,80.115c-10.458,22.813-9.986,49.599,1.366,77.463
-		C48.401,238.14,94.538,308.38,152.72,366.342c56.95,56.74,126.946,103.217,208.042,138.137c7.31,3.145,14.977,4.861,20.575,6.112
-		c1.908,0.429,3.555,0.795,4.756,1.124c0.66,0.18,1.34,0.277,2.023,0.283l0.641,0.003c0.002,0,0,0,0.003,0
-		c38.142,0,83.941-34.854,98.007-74.59C499.09,402.618,476.59,385.42,458.511,371.602z"/>
-	<path style="fill:currentColor;" d="M296.845,132.872c-6.53,0.165-20.121,0.502-24.889,14.344c-2.231,6.468-1.964,12.084,0.795,16.692
-		c4.048,6.761,11.805,8.833,18.86,9.97c25.586,4.106,38.726,18.254,41.354,44.522c1.221,12.248,9.469,20.801,20.059,20.801h0.002
-		c0.782,0,1.582-0.046,2.379-0.143c12.736-1.515,18.911-10.873,18.353-27.81c0.204-17.677-9.047-37.745-24.781-53.73
-		C333.187,141.484,314.156,132.454,296.845,132.872z"/>
-
-</svg>
-                            </a>
-                        </li>
-
-                        <li class="tel-number"><a href="tel: +79162929525" ><span class="pink">+7 (916) </span>292-95-25</a>
-                        </li>
-                        <li class="d-none d-lg-block"><a href="#form" class="obr-svaz ">Обратная связь</a></li>
-                    </ul>
-                </li>
-
-                <li class="d-none d-lg-block menu active"><a href="#about">О Shoolmovie</a></li>
-                <li class="d-none d-lg-block menu"><a href="#services">Услуги</a></li>
-                <li class="d-none d-lg-block menu"><a href="#projects">Проекты</a></li>
-                <li class="d-none d-lg-block menu"><a href="#about-us">О нас</a></li>
-                <li class="d-none d-lg-block menu"><a href="#contacts">Контакты</a></li>
-
-                <li class="youtube-li"><a href="https://www.youtube.com/" class="youtube ">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path style="fill: currentColor;"
-                              d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
-                    </svg>
-                </a></li>
-                <li class="d-lg-none"><a href="#" type="button" class="fabar"><span class="icon"></span></a></li>
-            </ul>
-        </nav>
-        <!--mobil-menu-->
-
-        <ul id="mobil-menu" class="container" style="display: none">
-            <li><a href="#about">О Shoolmovie</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#projects">Проекты</a></li>
-            <li><a href="#about-us">О нас</a></li>
-            <li><a href="#contacts">Контакты</a></li>
-            <li><a href="#form" class="obr-svaz">Обратная связь</a></li>
+<div class="st-container" id="st-container">
+<!-- content push wrapper -->
+<div class="st-pusher">
+    <nav class="st-menu st-effect-3" id="menu-3">
+        <div class="nav-top">
+            <div class="logo"></div>
+        </div>
+        <div class="user">
+            <div class="avatar"></div><!--todo styles svg to css-->
+            <div class="user-name">Sergey S. <span><svg width="10px" aria-hidden="true" data-prefix="fas"
+                                                        data-icon="chevron-down"
+                                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path
+                    fill="currentColor"
+                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span>
+            </div>
+        </div>
+        <ul>
+            <li><a href="">Рабочий стол</a></li>
+            <li><a href="">Столы и заказы</a></li>
+            <li><a href="">Календарь</a></li>
+            <li><a href="">Гости</a></li>
+            <li><a href="">Аналитика</a></li>
+            <li><a href="">Склад</a></li>
+            <li><a href="">Персонал</a></li>
+            <li><a href="">Контент</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href="">Касса</a></li>
         </ul>
-</header>
-<section class="banner">
-    <div class="logo">
-        <img src="img/schoolmovie_logo2.png" alt="logo">
-    </div>
-    <button class="btn -banner">Подробнее</button>
-</section>
-<section id="about" class="o-sm">
-    <div class="title">участники всего <br> образовательного пространства</div>
-    <div class="arrows container">
-        <div class="arrow -first">
-            <div class="arr"><img src="img/schoolmovie_element1.png" alt="1"></div>
-            <div class="title">школы</div>
-        </div>
-        <div class="arrow -second">
-            <div class="arr"><img src="img/schoolmovie_element2.png" alt="2"></div>
-            <div class="title">учебные центры, лектории и библиотеки, музыкальные школы и тд.</div>
-        </div>
-        <div class="arrow -third">
-            <div class="arr"><img src="img/schoolmovie_element3.png" alt="3"></div>
-            <div class="title">блогеры, педагоги, психологи, коучи, бизнес-тренеры.</div>
-        </div>
-    </div>
-</section>
-<section class="services" id="services">
-    <div class="container">
-        <div class="title">услуги</div>
-        <div class="title -small">Полезно Итересно Изящно</div>
-        <div class="container-services">
-            <div class="service-w"><img src="img/pic1.jpg" alt="Usluga 1">
-                <div class="text">Анимированный логотип</div>
-                <div class="price">от 13 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic2.jpg" alt="Usluga 2">
-                <div class="text">Digital-Визитка</div>
-                <div class="price">от 14 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic3.jpg" alt="Usluga 3">
-                <div class="text">День открытых дверей</div>
-                <div class="price">от 26 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic4.jpg" alt="Usluga 4">
-                <div class="text">Цифровой альбом “Выпускника”</div>
-                <div class="price">от 24 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic5.jpg" alt="Usluga 5">
-                <div class="text">Школа-ролик-фото-видео</div>
-                <div class="price">от 26 000&#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic6.jpg" alt="Usluga 6">
-                <div class="text">MOVIE</div>
-                <div class="price">от 40 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic7.jpg" alt="Usluga 7">
-                <div class="text">Запись тренингов и др. <br>  <span>( под ключ )</span></div>
-                <div class="price">от 40 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic8.jpg" alt="Usluga 8">
-                <div class="text">Организация и проведение<br>трансляций фестивалей и др.</div>
-                <div class="price">Цена по запросу</div>
-                <button class="btn -service">Заказать</button>
-            </div>
-            <div class="service-w"><img src="img/pic9.jpg" alt="Usluga 9">
-                <div class="text">интервью <br>&nbsp; </div>
-                <div class="price">от 18 000 &#8381;</div>
-                <button class="btn -service">Заказать</button>
-                <a href="#" class="calendar">
-                    <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="31px" height="30px">
-                        <path fill-rule="evenodd" fill="currentColor"
-                              d="M28.678,3.145 L25.641,3.145 L25.641,1.376 C25.641,0.629 25.041,-0.000 24.329,-0.000 L22.455,-0.000 C21.744,-0.000 21.143,0.629 21.143,1.376 L21.143,3.145 L10.009,3.145 L10.009,1.376 C10.009,0.629 9.409,-0.000 8.697,-0.000 L6.823,-0.000 C6.112,-0.000 5.511,0.629 5.511,1.376 L5.511,3.145 L2.325,3.145 C1.052,3.145 -0.000,4.244 -0.000,5.584 L-0.000,27.560 C-0.000,28.897 1.048,29.999 2.325,29.999 L28.675,29.999 C29.948,29.999 31.000,28.900 31.000,27.560 L31.000,5.584 C31.000,4.244 29.952,3.145 28.678,3.145 ZM22.532,1.492 L24.256,1.492 L24.256,3.891 L24.256,5.817 L22.532,5.817 L22.532,3.891 L22.532,1.492 ZM6.900,1.492 L8.625,1.492 L8.625,3.891 L8.625,5.817 L6.900,5.817 L6.900,3.891 L6.900,1.492 L6.900,1.492 ZM2.364,4.601 L5.550,4.601 L5.550,5.897 C5.550,6.643 6.150,7.273 6.861,7.273 L8.736,7.273 C9.447,7.273 10.048,6.643 10.048,5.897 L10.048,4.601 L21.143,4.601 L21.143,5.897 C21.143,6.643 21.744,7.273 22.455,7.273 L24.329,7.273 C25.041,7.273 25.641,6.643 25.641,5.897 L25.641,4.601 L28.716,4.601 C29.240,4.601 29.653,5.034 29.653,5.584 L29.653,9.515 L1.426,9.515 L1.426,5.584 C1.426,5.030 1.839,4.601 2.364,4.601 ZM28.678,28.543 L2.364,28.543 C1.839,28.543 1.426,28.110 1.426,27.560 L1.426,10.968 L29.615,10.968 L29.615,27.560 C29.615,28.110 29.202,28.543 28.678,28.543 ZM7.538,14.939 C7.538,15.333 7.240,15.646 6.865,15.646 L4.616,15.646 C4.241,15.646 3.943,15.333 3.943,14.939 C3.943,14.546 4.241,14.233 4.616,14.233 L6.865,14.233 C7.236,14.193 7.538,14.546 7.538,14.939 ZM14.021,14.939 C14.021,15.333 13.723,15.646 13.348,15.646 L11.099,15.646 C10.724,15.646 10.426,15.333 10.426,14.939 C10.426,14.546 10.724,14.233 11.099,14.233 L13.348,14.233 C13.685,14.193 14.021,14.546 14.021,14.939 ZM20.470,14.939 C20.470,15.333 20.172,15.646 19.797,15.646 L17.548,15.646 C17.173,15.646 16.874,15.333 16.874,14.939 C16.874,14.546 17.173,14.233 17.548,14.233 L19.797,14.233 C20.168,14.193 20.470,14.546 20.470,14.939 ZM26.953,14.939 C26.953,15.333 26.655,15.646 26.280,15.646 L24.031,15.646 C23.656,15.646 23.358,15.333 23.358,14.939 C23.358,14.546 23.656,14.233 24.031,14.233 L26.280,14.233 C26.655,14.193 26.953,14.546 26.953,14.939 ZM7.538,19.774 C7.538,20.167 7.240,20.480 6.865,20.480 L4.616,20.480 C4.241,20.480 3.943,20.167 3.943,19.774 C3.943,19.380 4.241,19.067 4.616,19.067 L6.865,19.067 C7.236,19.067 7.538,19.380 7.538,19.774 ZM14.021,19.774 C14.021,20.167 13.723,20.480 13.348,20.480 L11.099,20.480 C10.724,20.480 10.426,20.167 10.426,19.774 C10.426,19.380 10.724,19.067 11.099,19.067 L13.348,19.067 C13.685,19.067 14.021,19.380 14.021,19.774 ZM20.470,19.774 C20.470,20.167 20.172,20.480 19.797,20.480 L17.548,20.480 C17.173,20.480 16.874,20.167 16.874,19.774 C16.874,19.380 17.173,19.067 17.548,19.067 L19.797,19.067 C20.168,19.067 20.470,19.380 20.470,19.774 ZM26.953,19.774 C26.953,20.167 26.655,20.480 26.280,20.480 L24.031,20.480 C23.656,20.480 23.358,20.167 23.358,19.774 C23.358,19.380 23.656,19.067 24.031,19.067 L26.280,19.067 C26.655,19.067 26.953,19.380 26.953,19.774 ZM7.538,24.652 C7.538,25.045 7.240,25.358 6.865,25.358 L4.616,25.358 C4.241,25.358 3.943,25.045 3.943,24.652 C3.943,24.258 4.241,23.946 4.616,23.946 L6.865,23.946 C7.236,23.902 7.538,24.219 7.538,24.652 ZM14.021,24.652 C14.021,25.045 13.723,25.358 13.348,25.358 L11.099,25.358 C10.724,25.358 10.426,25.045 10.426,24.652 C10.426,24.258 10.724,23.946 11.099,23.946 L13.348,23.946 C13.685,23.902 14.021,24.219 14.021,24.652 ZM20.470,24.652 C20.470,25.045 20.172,25.358 19.797,25.358 L17.548,25.358 C17.173,25.358 16.874,25.045 16.874,24.652 C16.874,24.258 17.173,23.946 17.548,23.946 L19.797,23.946 C20.168,23.902 20.470,24.219 20.470,24.652 ZM26.953,24.652 C26.953,25.045 26.655,25.358 26.280,25.358 L24.031,25.358 C23.656,25.358 23.358,25.045 23.358,24.652 C23.358,24.258 23.656,23.946 24.031,23.946 L26.280,23.946 C26.655,23.902 26.953,24.219 26.953,24.652 Z"/>
+        <div class="nav-bottom">
+            <ul>
+                <li>Чат</li>
+                <li> <a class="circle circle-blue"><span class="number">6</span></a></li>
+                <li> class="circle circle-green"><span class="number">2</span></li>
+                <!--todo style width of svg in css-->
+                <li><i>
+                    <svg width="20px" aria-hidden="true" data-prefix="fas" data-icon="search"
+                         class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
                     </svg>
-                </a>
-            </div>
+                </i></li> <!--todo Как должен высвечиваться поиск-->
+            </ul>
         </div>
-    </div>
-</section>
-<section id="projects">
-    <div class="container">
-        <div class="title">Проекты</div>
-        <div class="title -small">Придумали вместе - Отдали миру!</div>
-        <div class="slider">
-            <div class="project -1">
-                <div class="pic"><img src="img/project-pic-1.jpg" alt="Pic-project-1"></div>
-                <div class="text">
-                    <div class="title">Возвращение бренда - учитель!</div>
-                    <p>Об учителях – практиках. Чей опыт лежит в основании образования и воспитания детей.</p>
-                    <p>О тех, кто уходит, кого мы должны знать и помнить.</p>
-                    <p>О тех, кто сейчас делает историю российского образования. </p>
-                    <p>О тех, кто всегда заботился и продолжает это делать сейчас - о будущем каждого ребенка.</p>
+    </nav>
 
-                    <button class="btn -project">Сделать мир лучше</button>
+
+    <div class="st-content"><!-- this is the wrapper for the content -->
+        <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+            <div id="st-trigger-effects " class="column d-none">
+                <button data-effect="st-effect-3">Push</button>
+            </div>
+
+            <div class="row">
+                <div class="with_callendar"><strong>Активность за <span class="callendar-dropdown"><a href="">сегодня<i>
+                <svg aria-hidden="true" data-prefix="fas"
+                     data-icon="chevron-down"
+                     class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
+                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path
+                        fill="currentColor"
+                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                </i></a></span></strong><span class="date">6 июля</span></div>
+                <div class="link_full_history"><a href="">Полная история активности</a></div>
+            </div>
+            <div class="table-history-activity"> <!--wrapper for list of history-->
+                <div class="row table-title d-mobil-none">
+                    <div class="name">Имя</div>
+                    <div class="process">Процесс</div> <!--todo спросить название колонки-->
+                    <div class="time">Время</div>
                 </div>
-            </div>
-            <div class="project -2">
-                <div class="pic"><img src="img/project-pic-2.jpg" alt="Pic-project-2"></div>
-                <div class="text">
-                    <div class="title">Правила жизни в школе и обществе</div>
-                    <p>Идея проекта появилась в разговорах с учителями. Много образовательного контента. Мало того, что
-                        помогает учителю объяснять основные правила совместной жизни в своей школе. Видео-ролик это
-                        всегда легче, ярче, эмоциональнее. И еще это общий язык для детей, родителей и школы. Этот язык
-                        может создавать одну волну для всех.</p>
-
-                    <button class="btn -project">Сделать мир лучше</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about-us" class="o-nas">
-    <div class="title">О нас</div>
-    <div class="title -small">Присоединяйтесь!</div>
-    <div class="peoples container">
-        <div class="people">
-            <div class="pic"><img src="img/avatar-1.png" alt="avatar-1"></div>
-            <div class="name">Инна Ярцева</div>
-            <div class="about-person">Руководитель проекта <br> SCHOOLMOVIE <br> Психолог</div>
-        </div>
-        <div class="people">
-            <div class="pic"><img src="img/avatar-2.png" alt="avatar-2"></div>
-            <div class="name">Алексей Шилов</div>
-            <div class="about-person">Креативный директор проекта <br>SCHOOLMOVIE. <br>
-                Генеральный продюсер компании <br>
-                Color Bars Studio
-            </div>
-        </div>
-        <div class="people">
-            <div class="pic"><img src="img/avatar-3.png" alt="avatar-3"></div>
-            <div class="name">Екатерина Булюхина</div>
-            <div class="about-person">Social Media Marketing</div>
-        </div>
-    </div>
-</section>
-<section id="contacts" class="contacts">
-    <div class="title">Контакты</div>
-    <div class="container  contact-container">
-        <div class="col-50">
-            <div class="contact">
-                <ul>
-                    <li class="address">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                >
-                            <path style="fill: currentColor;"
-                                  d="M8.500,-0.001 C3.805,-0.001 -0.000,3.637 -0.000,8.124 C-0.000,15.882 8.500,25.999 8.500,25.999 C8.500,25.999 17.000,15.882 17.000,8.124 C17.000,3.637 13.194,-0.001 8.500,-0.001 ZM8.500,12.609 C5.964,12.609 3.910,10.645 3.910,8.221 C3.910,5.799 5.964,3.834 8.500,3.834 C11.035,3.834 13.090,5.799 13.090,8.221 C13.090,10.645 11.035,12.609 8.500,12.609 Z"/>
-                        </svg>
-
-                        <p>г. Москва, 17-й&nbsp;проезд Марьиной рощи, дом&nbsp;4, корпус&nbsp;1, этаж&nbsp;8, SCHOOLMOVIE </p>
-                    </li>
-                    <li class="tell-contacts"><a href="tel: +79162929525" class="tel-number">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path style="fill:currentColor;"
-                                  d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/>
-                        </svg>
-                        +7 (916) 292-95-25</a>
-                        <a href="https://www.whatsapp.com/">
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
-
-	<path style="fill:currentColor;" d="M0,58l4.988-14.963C2.457,38.78,1,33.812,1,28.5C1,12.76,13.76,0,29.5,0S58,12.76,58,28.5
-		S45.24,57,29.5,57c-4.789,0-9.299-1.187-13.26-3.273L0,58z"/>
-	<path style="fill:#FFFFFF;" d="M47.683,37.985c-1.316-2.487-6.169-5.331-6.169-5.331c-1.098-0.626-2.423-0.696-3.049,0.42
-		c0,0-1.577,1.891-1.978,2.163c-1.832,1.241-3.529,1.193-5.242-0.52l-3.981-3.981l-3.981-3.981c-1.713-1.713-1.761-3.41-0.52-5.242
-		c0.272-0.401,2.163-1.978,2.163-1.978c1.116-0.627,1.046-1.951,0.42-3.049c0,0-2.844-4.853-5.331-6.169
-		c-1.058-0.56-2.357-0.364-3.203,0.482l-1.758,1.758c-5.577,5.577-2.831,11.873,2.746,17.45l5.097,5.097l5.097,5.097
-		c5.577,5.577,11.873,8.323,17.45,2.746l1.758-1.758C48.048,40.341,48.243,39.042,47.683,37.985z"/></svg>
-                        </a>
-                        <a href="https://telegram.org/">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path style="fill:currentColor;"
-                                      d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.viber.com/">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
-	<path style="fill:currentColor;" d="M437.976,214.854c0.615-72.186-60.866-138.361-137.051-147.512c-1.515-0.18-3.166-0.453-4.913-0.743
-		c-3.772-0.625-7.672-1.267-11.607-1.267c-15.614,0-19.788,10.968-20.887,17.51c-1.069,6.36-0.049,11.701,3.024,15.882
-		c5.171,7.031,14.269,8.279,21.577,9.28c2.142,0.296,4.163,0.571,5.855,0.951c68.449,15.295,91.497,39.341,102.761,107.208
-		c0.275,1.658,0.399,3.702,0.531,5.869c0.491,8.113,1.515,24.991,19.661,24.991h0.002c1.511,0,3.134-0.13,4.824-0.388
-		c16.898-2.568,16.368-17.996,16.114-25.409c-0.072-2.088-0.14-4.063,0.037-5.376C437.95,215.519,437.974,215.186,437.976,214.854z"
-		/>
-	<path style="fill:currentColor;" d="M279.974,40.846c2.027,0.146,3.947,0.286,5.545,0.531c112.4,17.286,164.091,70.54,178.416,183.819
-		c0.243,1.926,0.281,4.274,0.321,6.761c0.143,8.85,0.437,27.262,20.21,27.643l0.614,0.006c6.201,0,11.134-1.87,14.662-5.562
-		c6.155-6.438,5.726-16.002,5.379-23.689c-0.084-1.886-0.165-3.662-0.145-5.217C506.405,109.283,406.12,4.226,290.369,0.32
-		c-0.48-0.016-0.938,0.01-1.401,0.075c-0.227,0.033-0.649,0.075-1.371,0.075c-1.154,0-2.574-0.1-4.08-0.202
-		C281.696,0.143,279.632,0,277.54,0c-18.434,0-21.938,13.102-22.386,20.912C254.12,38.963,271.582,40.233,279.974,40.846z"/>
-	<path style="fill:currentColor;" d="M458.511,371.602c-2.39-1.825-4.861-3.714-7.174-5.578c-12.272-9.876-25.328-18.979-37.955-27.783
-		c-2.62-1.825-5.241-3.652-7.852-5.484c-16.174-11.361-30.715-16.882-44.453-16.882c-18.504,0-34.636,10.224-47.951,30.384
-		c-5.899,8.938-13.056,13.283-21.876,13.283c-5.215,0-11.142-1.488-17.612-4.425c-52.207-23.674-89.486-59.972-110.803-107.886
-		c-10.305-23.158-6.964-38.295,11.172-50.615c10.299-6.99,29.469-20.003,28.111-44.922c-1.538-28.298-63.976-113.445-90.284-123.115
-		c-11.138-4.096-22.841-4.134-34.846-0.095C46.744,38.651,25.041,56.506,14.219,80.115c-10.458,22.813-9.986,49.599,1.366,77.463
-		C48.401,238.14,94.538,308.38,152.72,366.342c56.95,56.74,126.946,103.217,208.042,138.137c7.31,3.145,14.977,4.861,20.575,6.112
-		c1.908,0.429,3.555,0.795,4.756,1.124c0.66,0.18,1.34,0.277,2.023,0.283l0.641,0.003c0.002,0,0,0,0.003,0
-		c38.142,0,83.941-34.854,98.007-74.59C499.09,402.618,476.59,385.42,458.511,371.602z"/>
-	<path style="fill:currentColor;" d="M296.845,132.872c-6.53,0.165-20.121,0.502-24.889,14.344c-2.231,6.468-1.964,12.084,0.795,16.692
-		c4.048,6.761,11.805,8.833,18.86,9.97c25.586,4.106,38.726,18.254,41.354,44.522c1.221,12.248,9.469,20.801,20.059,20.801h0.002
-		c0.782,0,1.582-0.046,2.379-0.143c12.736-1.515,18.911-10.873,18.353-27.81c0.204-17.677-9.047-37.745-24.781-53.73
-		C333.187,141.484,314.156,132.454,296.845,132.872z"/>
-
-</svg>
-                        </a>
-                    </li>
-                    <li class="email"><a href="mailto: info@schoolmoviе.ru">
-                        <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                                width="21px" height="15px">
-                            <path style="fill: currentColor;"
-                                  d="M13.737,7.615 L20.986,1.306 L20.986,13.777 L13.737,7.615 ZM0.463,0.404 C0.733,0.150 1.096,-0.006 1.496,-0.006 L19.476,-0.006 C19.879,-0.006 20.242,0.149 20.512,0.400 L10.486,8.997 L0.463,0.404 ZM-0.014,13.777 L-0.014,1.311 L7.236,7.615 L-0.014,13.777 ZM10.486,10.497 L13.085,8.222 L20.509,14.592 C20.239,14.844 19.876,14.999 19.476,14.999 L1.496,14.999 C1.094,14.999 0.730,14.844 0.460,14.592 L7.888,8.222 L10.486,10.497 Z"/>
-                        </svg>
-                        <span>info@schoolmoviе.ru</span>
-                    </a></li>
+                <div class="row main-table"> <!--main-table wrapper-->
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Суарез</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Забронировал стол №17 на 21:00
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Мила</span><br>
+                            <span class="email-guest"><a href="mailto:mila@gmail.com">mila@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Получил заказ
+                        </div>
+                        <div class="time">
+                            27 минут назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Croissant</span><br>
+                            <span class="email-guest"><a href="mailto:cro@mail.ru">cro@mail.ru</a></span>
+                        </div>
+                        <div class="process">
+                            Вышел из заведения и оплатил заказ
+                        </div>
+                        <div class="time">
+                            16:30
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Евгений Формин</span><br>
+                            <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Приглашен пользователем Майк Ковальски
+                        </div>
+                        <div class="time">
+                            16:25
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">John</span><br>
+                            <span class="email-guest"><a href="mailto:john@gmail.com">john@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Сел за столом №28
+                        </div>
+                        <div class="time">
+                            15:32
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Суарез Мигос</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Забронировал стол №17 на 21:00
+                        </div>
+                        <div class="time">
+                            14:30
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Суарез</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Забронировал стол №17 на 21:00
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Мила</span><br>
+                            <span class="email-guest"><a href="mailto:mila@gmail.com">mila@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Получил заказ
+                        </div>
+                        <div class="time">
+                            27 минут назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Croissant</span><br>
+                            <span class="email-guest"><a href="mailto:cro@mail.ru">cro@mail.ru</a></span>
+                        </div>
+                        <div class="process">
+                            Вышел из заведения и оплатил заказ
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Евгений Формин</span><br>
+                            <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Приглашен пользователем Майк Ковальски
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">John</span><br>
+                            <span class="email-guest"><a href="mailto:john@gmail.com">john@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Забронировал стол №17 на 21:00
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <div class="name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Суарез Мигос</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="process">
+                            Забронировал стол №17 на 21:00
+                        </div>
+                        <div class="time">
+                            2 минуты назад
+                        </div>
+                    </div>
+                    <div class="loading-div d-none"><!--loading div-->
+                        <div class="loading-text">Загрузка...</div>
+                    </div><!--/loading-div   -->
+                </div> <!--/main-table-->
+            </div> <!--/table-history-->
+            <div class="row bottom-paginator">
+                <a href="#">Загрузить еще</a>
+                <ul class="paginator">
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
                 </ul>
             </div>
-            <div id="form" class="form">
-                <div class="form-group">
-                    <div class="title">Обратная связь</div>
-                    <div class="input-block">
-                        <input type="text" id="name" name="name" required="1">
-                        <div class="place_holder">Имя/Фамилия<span>*</span></div>
-                    </div>
-                    <div class="input-block">
-                        <input type="text" id="E-mail" name="E-mail" required="1">
-                        <div class="place_holder">E-mail<span>*</span></div>
-                    </div>
-                    <div class="input-block">
-                        <input type="text" id="phone" name="phone" placeholder="Телефон">
-                    </div>
-                    <div class="btn-block">
-                        <div><span>*</span>обязательно для заполнения</div>
-                        <button class="btn -form" id="callback-btn">отправить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-50">
-            <div id="map"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af584beabb6d16d2dcb0c9ee0997684cc3d1d7735bb8e4c7396b4c28f05ebafb0&amp;width=100%&amp;height=467&amp;lang=ru_RU&amp;scroll=true"></script></div>
-        </div>
-    </div>
-</section>
-<div id="lipuchka" style="display: none;">
-    <div class="title">присоединиться</div>
-    <div class="close"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path style="fill:currentColor;" d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/></svg></div>
-    <div class="form-group">
-        <div class="input-block">
-            <input type="text" id="name2" name="name2" required="1">
-            <div class="place_holder">Имя/Фамилия<span>*</span></div>
-        </div>
-        <div class="input-block">
-            <input type="text" id="job" name="job" required="1">
-            <div class="place_holder">Место работы<span>*</span></div>
-        </div>
-        <div class="input-block">
-            <input type="text" id="position" name="position" placeholder="Должность">
-        </div>
-        <div class="input-block">
-            <input type="text" id="E-mail2" name="E-mail2" required="1">
-            <div class="place_holder">E-mail<span>*</span></div>
-        </div>
 
-            <button class="btn -form_lipuchka" id="connect-btn">отправить</button>
-    </div>
-</div>
-<footer>
-    <div class="up container">
-        <div class="logo-footer"><img src="img/schoolmovie_logo6%20.png" alt=""></div>
-        <div class="text-blocks">
-            <ul>
-                <li><a href="#about">О SCHOOLMOVIE</a></li>
-                <li><a href="#services">УСЛУГИ</a></li>
-            </ul>
-        </div>
-        <div class="text-blocks">
-            <ul>
-                <li><a href="#projects">ПРОЕКТЫ</a></li>
-                <li><a href="#about-us">О НАС</a></li>
-            </ul>
-        </div>
-        <div class="text-blocks last -one">
-            <ul>
-                <li><a href="#contacts">КОНТАКТЫ</a></li>
-                <li><a href="tel: +79162929525" class="tel-number"><span class="pink">+7 (916) </span>292-95-25</a></li>
-                <li><a class="tt-none" href="mailto: info@schoolmoviе.ru">info@schoolmoviе.ru</a></li>
-            </ul>
-        </div>
-        <div class="text-blocks last -two">
-            <li>
-                <a class="soc-icons facebook" href="https://www.facebook.com/"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path style="fill:currentColor;" d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg></a>
-                <a class="soc-icons" href="https://vk.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path style="fill:currentColor;" d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg></a>
-                <a  class="soc-icons vimeo" href="https://vimeo.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path  style="fill:currentColor;" d="M447.8 153.6c-2 43.6-32.4 103.3-91.4 179.1-60.9 79.2-112.4 118.8-154.6 118.8-26.1 0-48.2-24.1-66.3-72.3C100.3 250 85.3 174.3 56.2 174.3c-3.4 0-15.1 7.1-35.2 21.1L0 168.2c51.6-45.3 100.9-95.7 131.8-98.5 34.9-3.4 56.3 20.5 64.4 71.5 28.7 181.5 41.4 208.9 93.6 126.7 18.7-29.6 28.8-52.1 30.2-67.6 4.8-45.9-35.8-42.8-63.3-31 22-72.1 64.1-107.1 126.2-105.1 45.8 1.2 67.5 31.1 64.9 89.4z"/></svg></a>
-                <a class="soc-icons youtube" href="https://www.youtube.com/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path style="fill: currentColor;"
-                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
-                </svg></a>
-                <a class="soc-icons" href="#"><img src="img/ru.png" alt="ru"></a>
-            </li>
-            <li><a class="tt-none" href="http://www.innayartseva.com/">www.innayartseva.com</a></li>
-            <li><a class="tt-none" href="http://www.cbdigital.ru/">www.cbdigital.ru</a></li>
-        </div>
-    </div>
-    <div class="down container">
-        <div class="down-text">© 2017 Все права защищены </div>
-        <a class="down-text" href="#">Креативная студия</a>
-        <div class="down-text -llogo">
-            <img src="img/brand.png" alt="1">
+        </div><!-- /st-content-inner -->
+    </div><!-- /st-content-->
+    <!--todo как должен вести список на нажатие кнопки Загрузить еще-->
+</div><!-- /st-pusher -->
+</div><!-- /st-container -->
 
-        </div>
-    </div>
-</footer>
+
 <script
-        src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script type="text/javascript" src="libs/slick/slick.min.js"></script>
+<script type="text/javascript" src="libs/nav/classie.js"></script>
+<script type="text/javascript" src="libs/nav/sidebarEffects.js"></script>
+<script src="js/polyfill.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
