@@ -1,56 +1,16 @@
-/**
- * @license
- * MyFonts Webfont Build ID 3474904, 2017-10-30T10:13:31-0400
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: Gilroy-Medium by Radomir Tinkov
- * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/medium/
- * Copyright: Copyright &#x00A9; 2016 by Radomir Tinkov. All rights reserved.
- * Licensed pageviews: 10,000
- *
- *
- * License: https://www.myfonts.com/viewlicense?type=web&buildid=3474904
- *
- * © 2017 MyFonts Inc
-*/
-
-
-/* @import must be at top of file, otherwise CSS will not work */
-/*@import url("//hello.myfonts.net/count/3505d8");*/
-
-
-@font-face {font-family: 'Gilroy';src: url('../fonts/3505D8_0_0.eot');src: url('../fonts/3505D8_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/3505D8_0_0.woff2') format('woff2'),url('../fonts/3505D8_0_0.woff') format('woff'),url('../fonts/3505D8_0_0.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;}
-
-
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/gilroy-extrabold.eot');
-    src: url('../fonts/gilroy-extrabold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/gilroy-extrabold.woff2') format('woff2'),
-    url('../fonts/gilroy-extrabold.woff') format('woff'),
-    url('../fonts/gilroy-extrabold.ttf') format('truetype');
-    font-weight: 700;
+    font-family: 'FuturaDemiC';
+    src: url('../fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),  url('../fonts/FuturaDemiC.otf')  format('opentype'),
+    url('../fonts/FuturaDemiC.woff') format('woff'), url('../fonts/FuturaDemiC.ttf')  format('truetype'), url('../fonts/FuturaDemiC.svg#FuturaDemiC') format('svg');
+    font-weight: normal;
     font-style: normal;
-
 }
 
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/gilroy-light.eot');
-    src: url('../fonts/gilroy-light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/gilroy-light.woff2') format('woff2'),
-    url('../fonts/gilroy-light.woff') format('woff'),
-    url('../fonts/gilroy-light.ttf') format('truetype');
-    font-weight: 300;
+    font-family: 'FuturaBookC';
+    src: url('../fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'),  url('../fonts/FuturaBookC.woff') format('woff'), url('../fonts/FuturaBookC.ttf')  format('truetype'), url('../fonts/FuturaBookC.svg#Futura') format('svg');
+    font-weight: normal;
     font-style: normal;
-
 }

@@ -13,15 +13,14 @@ $blue: #4d8ee0;
 $green: #7ed224;
 $logo_color: #d9e0e8;
 
-$font_wight_light: 300;
-$font_wight_regular: 500;
-$font_wight_bold: 700;
+$fontFuturaC: FuturaBookC, "Arial Narrow", sans-serif;
+$fontFuturaDemiC: FuturaDemiC, Arial, sans-serif;
 
+$nav-mobile-top:64px;
 
-  $row_display: block;
-@media screen and (min-width: 576px) {
-    $row_display: flex;
-}
+$nav-panel-width: 280px;
+
+$av-guest-width: 35px;//avatar width/height
 
 .col-1, .col-2, .col-3,
 .col-4, .col-5, .col-6,
@@ -51,7 +50,7 @@ $font_wight_bold: 700;
 .col-12 { flex-basis: 100%; }
 
 .row {
-  display: $row_display;
+  display: block;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -69,8 +68,8 @@ body, html {
   border: 0;
   font: {
     size: 100%;
-    family: Gilroy, sans-serif;
-    weight: $font_wight_light;
+    family: $fontFuturaC;
+    weight: normal;
   }
   line-height: 1.2;
   background-color: $white;
@@ -82,6 +81,9 @@ body, html {
 }
 .d-mobil-none {
   display: none;
+}
+.d-mobil-block{
+  display: block;
 }
 
 .container {
@@ -331,8 +333,85 @@ nav {
 
 
 /////////////
+//mobil horizontal nav panel
+.nav-mobile-top{
+  width: 100%;
+  height: $nav-mobile-top;
+  padding: 0.25em 0.5em;
+  background-color: $nav_bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+   }
+///fabar icon block start
+.fabar{
+  outline: none;
+  display: inline-block;
+  background-color: transparent;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 20px 0;
+  border: transparent;
+}
+.fabar.active > .icon {
+  background-color: transparent;
+}
+ .fabar > .icon,  .fabar > .icon:before,  .fabar > .icon:after {
+  display: block;
+  width: 24px;
+  height: 3px;
+  -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
+  transition: background-color 0.3s linear, transform 0.3s linear;
+  transition: background-color 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
+  background-color: $logo_color;
+}
+.fabar > .icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ .fabar > .icon:before,  .fabar > .icon:after {
+  position: absolute;
+  content: '';
+}
+ .fabar.active > .icon:before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+ .fabar > .icon:before {
+  top: -8px;
+}
+ .fabar.active > .icon:after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+ .fabar > .icon:after {
+  top: 8px;
+}
+////fabar icon block end
+
 //main section
 //history full
+.for-mobile{
+  width: 100%;
+  height: calc(#{$nav-mobile-top} - 1em);
+  background-color: transparent;
+}
+//navigation panel restyle
+.st-menu{
+  width: $nav-panel-width;
+  overflow-y: auto;
+}
+.st-effect-3.st-menu-open .st-pusher {
+  -webkit-transform: translate3d(#{$nav-panel-width}, 0, 0);
+  transform: translate3d(#{$nav-panel-width}, 0, 0);
+}
 .st-content {
   overflow-y: scroll;
   background: $white;
@@ -344,31 +423,48 @@ nav {
 }
 .main-table {
   .item{
+    $padding_margin:0.75em;
     border-top: 1px solid $greylight_hr;
-    padding-top: 0.5em;
-    div{
-      margin-bottom: 0.5em;
-    }
+    padding-top: $padding_margin;
+    margin-top: $padding_margin;
+
   }
   .avatar-guest{
     display: block;
     float: left;
     margin-right: 0.75em;
     border-radius: 50%;
-    $av-guest-width: 45px;
+
     width: $av-guest-width;
     height: $av-guest-width;
     background-color: $greydark;
   }
   .name-guest{
-    font-weight:$font_wight_bold;
+    font-weight:normal;
+    font-family:$fontFuturaDemiC;
   }
   .email-guest a{
     color: $text_mute;
   }
   .process{
-    font-weight: $font_wight_bold;
+    margin: auto;
+    font-weight: normal;
+    font-family:$fontFuturaDemiC;
   }
+  }
+.time{
+  margin: auto;
+  text-align: right;
+}
+.table-title{
+  .name, .process, .time{
+    color: $text_mute;
+  }
+  margin-bottom: 1em;
+}
+.top-callendar{
+  align-items: baseline;
+  justify-content: space-between;
 }
 .with_callendar,
 .link_full_history{
@@ -376,14 +472,17 @@ nav {
 }
 
 .with_callendar{
+  font-size:1.0em;
   strong{
-    font-weight:$font_wight_bold;
+    font-weight:normal;
+    font-family:$fontFuturaDemiC;
   }
   .callendar-dropdown a{
     color: $links_a;
   }
   .date{
-    font-weight: $font_wight_regular;
+    font-weight: normal;
+    font-family: $fontFuturaC;
     margin-left: 0.5em;
     color: $text_mute;
   }
@@ -422,7 +521,8 @@ nav {
 
 .bottom-paginator{
   margin-top: 1em;
-  font-weight:$font_wight_regular;
+  font-weight:normal;
+  font-family:$fontFuturaC;
   display: flex;
   justify-content: space-between;
   flex-direction: row;

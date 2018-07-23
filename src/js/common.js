@@ -1,12 +1,22 @@
+/**
+ *
+ *  Take clients width and height
+ *
+ */
 
+let w = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
 
-const hello = (name) => {
-    return  `hello ${name}`;
-};
-const hellokitty = 3;
+let h = window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
 
-let ig = function (a) {
-    console.log(a+ 'fdsgsdfgsdv');
-};
+let x = document.getElementById('demo');
 
-
+// if (w>=992) {
+//     let el = document.getElementById('st-container');
+//     let el2 = document.getElementById('menu-3');
+//     el.classList.add('st-menu-open');
+//     el2.classList.add('st-menu-open');
+// }
