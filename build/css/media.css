@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*==========  Mobile First Method  ==========*/
+/* xs - устройства (до 576px) */
+/* CSS для ширины, которая меньше 575px (включительно) */
+/* sm-устройства (больше или равно 576px) */
+/*@media (min-width: 576px) {
+  !* CSS для: 576px <= ширины <= 767px *!
+
+}*/
+/* xs - устройства (до 600px) */
+/* CSS для ширины, которая меньше 599px (включительно) */
+/* sm-устройства (больше или равно 600px) */
+@media (min-width: 600px) {
+  /* CSS для: 600px <= ширины <= 767px */
+  .d-mobil-none {
+    display: block; }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .with_callendar {
+    font-size: 1.25em; } }
+
+/* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+  /* CSS для: 768px <= ширины <= 991px */ }
+
+/* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+  /* CSS для: 992px <= ширины <= 1119px */
+  .d-mobil-block {
+    display: none; }
+  .for-mobile {
+    display: none; }
+  .st-effect-3.st-menu {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0%, 0, 0); }
+  .st-menu {
+    visibility: visible; }
+  .st-content {
+    width: calc(100% - 280px);
+    float: right; } }
+
+/* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+  /* CSS для: ширины >= 1200px */ }
