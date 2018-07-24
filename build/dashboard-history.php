@@ -1,89 +1,17 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Название сайта</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="favicon.ico"/> <!--todo сгенерировать иконску-->
-    <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
-    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="libs/nav/component.css"/>
-    <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/media.css"/>
+<?php require "includes/header.html"; ?>
 
-</head>
-<body>
 <div class="st-container" id="st-container">
 <!-- content push wrapper -->
 <div class="st-pusher">
-    <nav class="st-menu st-effect-3" id="menu-3">
-        <div class="nav-top">
-            <div class="logo"></div>
-        </div>
-        <div class="user">
-            <div class="avatar"></div><!--todo styles svg to css-->
-            <div class="user-name">Sergey S. <span><svg width="10px" aria-hidden="true" data-prefix="fas"
-                                                        data-icon="chevron-down"
-                                                        class="svg-inline--fa fa-chevron-down fa-w-14" role="img"
-                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path
-                    fill="currentColor"
-                    d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg></span>
-            </div>
-        </div>
-        <ul>
-            <li><a href="">Рабочий стол</a></li>
-            <li><a href="">Столы и заказы</a></li>
-            <li><a href="">Календарь</a></li>
-            <li><a href="">Гости</a></li>
-            <li><a href="">Аналитика</a></li>
-            <li><a href="">Склад</a></li>
-            <li><a href="">Персонал</a></li>
-            <li><a href="">Контент</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href="">Касса</a></li>
-        </ul>
-        <div class="nav-bottom">
-            <ul>
-                <li>Чат</li>
-                <li> <a class="circle circle-blue"><span class="number">6</span></a></li>
-                <li> class="circle circle-green"><span class="number">2</span></li>
-                <!--todo style width of svg in css-->
-                <li><i>
-                    <svg width="20px" aria-hidden="true" data-prefix="fas" data-icon="search"
-                         class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                    </svg>
-                </i></li> <!--todo Как должен высвечиваться поиск-->
-            </ul>
-        </div>
-    </nav>
+
+    <?php require "includes/nav-left.html"; ?>
 
 
     <div class="st-content"><!-- this is the wrapper for the content -->
         <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
 
-            <nav class="nav-mobile-top d-mobil-block">
-                <div id="st-trigger-effects" class="column">
-                    <button data-effect="st-effect-3" class="fabar"><span class="icon"></span></button>
-                </div>
-                <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
-                    <g fill="none" fill-rule="evenodd" transform="translate(-2 -2)">
-                        <rect width="49.575" height="49.575" x="4.274" y="4.324" fill="#DAE0E8" rx="12" transform="rotate(11 29.062 29.111)"/>
-                        <text fill="#000" font-family="FuturaDemiC" font-size="24" font-weight="500">
-                            <tspan x="21" y="37">А</tspan>
-                        </text>
-                    </g>
-                </svg></span></div>
-            </nav>
-                <div class="for-mobile"></div>
+            <?php require "includes/nav-top-mobile.html"; ?>
+
             <div class="row top-callendar">
                 <div class="with_callendar"><strong>Активность за <span class="callendar-dropdown"><a href="">сегодня<i>
                 <svg aria-hidden="true" data-prefix="fas"
@@ -282,14 +210,5 @@
 </div><!-- /st-container -->
 
 
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script type="text/javascript" src="libs/slick/slick.min.js"></script>
-<script type="text/javascript" src="libs/nav/classie.js"></script>
-<script type="text/javascript" src="libs/nav/sidebarEffects.js"></script>
-<script src="js/polyfill.min.js"></script>
-<script src="js/common.js"></script>
-</body>
-</html>
+<?php require "includes/footer-scripts.html"; ?>
+<?php require "includes/footer.html"; ?>
