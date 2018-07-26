@@ -1,0 +1,246 @@
+@import url(../libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css);
+//общие переменные
+$nav_active_a: #15129d;
+$nav_a: #a49fc8;
+$links_a: #4c8dc3;
+$nav_bg: #f5f5f5;
+$greylight1: #fbfbfb; //loading... bg; dashboard top
+$greylight2: #e1e1e1; //search
+$greylight_hr: #e2e2e2;
+$greydark: #d8d8d8; //avatar_bg
+$text_mute: #7c7c7c;
+$text_mute2: #cfcfcf;
+$white: #fff;
+$black: #000;
+$blue: #4d8ee0;
+$green: #7ed224;
+$logo_color: #d9e0e8;
+
+$fontFuturaC: FuturaBookC, "Arial Narrow", sans-serif;
+$fontFuturaDemiC: FuturaDemiC, Arial, sans-serif;
+
+$nav-mobile-top: 64px;
+
+$nav-panel-width: 280px;
+
+$av-guest-width: 35px; //avatar of guest width/height
+$av-width: 35px; //avatar of the user width/height
+
+$font_section_title: 1.25rem;
+
+//к страницам с рабочим столом
+
+$av_waiters_bg: #f3f3f3;
+$avatar_waiters_size: 35px;
+$font_small_size: 18px;
+$font_big_size: 30px;
+$avatar_waiters_status: 8px;
+$avatar_waiters_status_online: #73d600;
+$avatar_waiters_status_offline: red;
+
+// к этой странице
+
+//////////////////////////
+.dashboard.top {
+  background-color: $greylight1;
+  margin: -2em -2em 0;
+  padding: 2em;
+  .row {
+    padding-right: 1em;
+  }
+  .info {
+    color: $black;
+  }
+  .info.big-text {
+    font-family: $fontFuturaDemiC;
+    font-size: $font_big_size;
+  }
+  .info.small-text {
+    font-family: $fontFuturaC;
+    font-size: $font_small_size;
+    margin-bottom: 1em;
+  }
+  .total_number {
+    font-size: #{$font_big_size * 0.6};
+    color: $text_mute2;
+    &:before {
+      content: '/';
+    }
+  }
+  .info.waiter-info {
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+  }
+  .waiter_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+  }
+  .waiter {
+    width: $avatar_waiters_size;
+    height: $avatar_waiters_size;
+    background-color: $av_waiters_bg;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    margin: 3px;
+    position: relative;
+    .online {
+      display: block;
+      position: absolute;
+      width: $avatar_waiters_status;
+      height: $avatar_waiters_status;
+      background-color: $avatar_waiters_status_offline;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      right: 0;
+      &.active {
+        background-color: $avatar_waiters_status_online;
+      }
+    }
+  }
+}
+
+.title-section {
+  margin-top: 1em;
+  font-size: $font_section_title;
+  font-family: $fontFuturaDemiC;
+  margin-right: 1em;
+
+  &-link{
+    font-size: 1rem;
+    font-family:$fontFuturaC;
+
+  }
+}
+
+.active-orders {
+  .orders-wrapper {
+    overflow: hidden;
+  }
+  .orders {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-left: 6px;
+
+    li {
+      width: 280px;
+      height: 94px;
+      padding: 1.25em 1em;
+      background-color: #ffffff;
+      margin: 1.5em 1.5em 1.5em 0;
+      box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+      flex-grow: 0;
+      flex-shrink: 0;
+      //display: block;
+      //float: left;
+
+      .link_status_div {
+        margin-top: 0.75em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-family: $fontFuturaDemiC;
+      }
+      .zakaz-title {
+        font-family: $fontFuturaDemiC;
+      }
+      .link {
+        margin-right: 2em;
+
+      }
+      .status {
+        color: $text_mute2;
+      }
+    }
+  }
+}
+//////// Hall layout(plan) section
+.hall_layout_wrapper{
+  min-height: 300px;
+  height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+
+//////restyling of order list history
+.history_orders{
+  .bottom-paginator .link{
+    text-align: center;
+    margin: auto;
+  }
+  .paginator{
+    display: none;
+  }
+}
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* xs - устройства (до 576px) */
+/* CSS для ширины, которая меньше 575px (включительно) */
+
+/* sm-устройства (больше или равно 576px) */
+/*@media (min-width: 576px) {
+  !* CSS для: 576px <= ширины <= 767px *!
+
+}*/
+
+/* xs - устройства (до 600px) */
+/* CSS для ширины, которая меньше 599px (включительно) */
+
+/* sm-устройства (больше или равно 600px) */
+@media (min-width: 600px) {
+  /* CSS для: 600px <= ширины <= 767px */
+  .dashboard.top {
+    .info.waiter-info {
+      margin-bottom: 0;
+      margin-right: 1em;
+    }
+    .waiter_div{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .waiters-row{
+      align-items: center;
+      margin-top: 1em;
+    }
+  }
+}
+
+/* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+  /* CSS для: 768px <= ширины <= 991px */
+
+}
+
+/* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+  /* CSS для: 992px <= ширины <= 1119px */
+
+
+}
+
+/* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+  /* CSS для: ширины >= 1200px */
+
+}
+
+//@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//  /* IE10+ CSS styles go here */
+//}
+
+

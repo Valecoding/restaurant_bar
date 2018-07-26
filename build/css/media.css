@@ -19,7 +19,23 @@
     display: -ms-flexbox;
     display: flex; }
   .with_callendar {
-    font-size: 1.25em; } }
+    font-size: 1.25em; }
+  .with_callendar,
+  .link_full_history {
+    position: relative !important; }
+  #ui-datepicker-div {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.06) !important;
+    width: 300px;
+    height: 260px;
+    position: absolute;
+    top: 35px !important;
+    left: 125px !important;
+    z-index: 90 !important;
+    border-radius: 0;
+    border: transparent;
+    margin: 0px; } }
 
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {

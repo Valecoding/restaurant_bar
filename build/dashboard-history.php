@@ -1,14 +1,9 @@
-<?php require "includes/header.html"; ?>
+<?php require "includes/header.php"; ?>
 
-<div class="st-container" id="st-container">
-<!-- content push wrapper -->
-<div class="st-pusher">
 
+<!--    Start of the container in the nav-left.html-->
     <?php require "includes/nav-left.html"; ?>
-
-
-    <div class="st-content"><!-- this is the wrapper for the content -->
-        <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+    <!--    continue of the container in the nav-left.html-->
 
             <?php require "includes/nav-top-mobile.html"; ?>
 
@@ -203,12 +198,7 @@
                 </ul>
             </div>
 
-        </div><!-- /st-content-inner -->
-    </div><!-- /st-content-->
-    <!--todo как должен вести список на нажатие кнопки Загрузить еще-->
-</div><!-- /st-pusher -->
-</div><!-- /st-container -->
-
+       <?php require "includes/st-content-blocks-end.html"; ?>
 
 <?php require "includes/footer-scripts.html"; ?>
 <?php require "includes/footer.html"; ?>
