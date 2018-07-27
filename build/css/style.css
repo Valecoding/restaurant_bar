@@ -84,8 +84,8 @@ body, html {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: FuturaBookC, "Arial Narrow", sans-serif;
-  font-weight: normal;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  font-weight: 400;
   line-height: 1.2;
   background-color: #fff; }
 
@@ -113,7 +113,7 @@ ul, li {
 
 a {
   text-decoration: none;
-  color: #4c8dc3; }
+  color: #4990e2; }
 
 a:focus, button:focus {
   outline: none; }
@@ -139,6 +139,8 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   z-index: 95; }
+  .nav-mobile-top .logo img {
+    height: calc(64px - 4px); }
 
 .fabar {
   outline: none;
@@ -148,7 +150,7 @@ header {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  padding: 20px 0;
+  padding: 18px 0;
   border: transparent; }
 
 .fabar.active > .icon {
@@ -200,32 +202,39 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 1em 1em 1em 2em;
+  padding: 1.35em 1.35em 1.35em 2.4em;
   width: 280px;
   overflow-y: auto;
-  background: #f5f5f5; }
+  background: #f5f5f5;
+  /*  .logo svg {
+    height: 40px;
+    width: 40px;
+  }*/ }
   .st-menu .logo {
     margin-top: 1em;
     margin-bottom: 3em; }
-  .st-menu .logo svg {
-    height: 40px;
-    width: 40px; }
+  .st-menu .logo img {
+    margin-left: -1em; }
   .st-menu .user {
     color: #000;
     margin-bottom: 3em; }
     .st-menu .user .user-name {
       line-height: 35px;
-      color: #000; }
+      color: #000;
+      float: left;
+      width: calc(100% - 35px); }
+      .st-menu .user .user-name span {
+        float: right;
+        margin-right: 1em; }
     .st-menu .user .avatar {
       display: block;
-      float: left;
-      margin-right: 0.75em;
+      float: right;
       border-radius: 50%;
       width: 35px;
       height: 35px;
       background-color: #d8d8d8; }
     .st-menu .user svg {
-      color: #7c7c7c;
+      color: rgba(0, 0, 0, 0.5);
       padding-top: 1px;
       width: 8px; }
 
@@ -235,18 +244,150 @@ header {
   box-shadow: none; }
 
 .st-menu ul li a {
-  font-family: FuturaBookC, "Arial Narrow", sans-serif;
-  color: #a49fc8;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  color: rgba(46, 84, 107, 0.4);
   text-transform: inherit;
   padding: 0.6em 0;
-  letter-spacing: -0.5px; }
+  letter-spacing: 0;
+  font-weight: 400; }
 
 .st-menu ul li a:hover,
 .st-menu ul li a:active,
 .st-menu ul li a:focus,
 .st-menu ul li a.active {
-  color: #15129d;
+  color: #2e546b;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-weight: 600;
   background-color: transparent; }
+
+.st-menu .notification {
+  margin-left: 1em;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  font-size: 14px;
+  border-radius: 3px;
+  text-align: center; }
+
+.st-menu li.obzor,
+.st-menu .callendar,
+.st-menu .chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+
+.st-menu .chat {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-right: 0.5em; }
+
+.st-menu li.obzor a {
+  width: 60px; }
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 3px;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+
+.st-menu .input-group {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+  .st-menu .input-group .form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: transparent;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out; }
+  .st-menu .input-group .input-group-append {
+    margin-left: -1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .st-menu .input-group .input-group-append .btn-nav-search {
+      width: 40px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      position: relative;
+      z-index: 2;
+      color: rgba(151, 151, 151, 0.2);
+      background-color: transparent;
+      background-image: none;
+      padding: 7px 8px 0; }
+    .st-menu .input-group .input-group-append .btn-nav-search:hover {
+      color: #979797; }
+
+.st-menu .navbar-task {
+  background-color: rgba(73, 144, 226, 0.1);
+  color: #4990e2;
+  width: 66px; }
+
+.st-menu .chat-events {
+  background-color: rgba(73, 144, 226, 0.1);
+  color: #4990e2; }
+
+.st-menu .navbar-calendar-events {
+  background-color: #4990e2;
+  color: #fff; }
 
 .st-menu .nav-bottom {
   margin-top: auto; }
@@ -258,7 +399,7 @@ header {
     -ms-flex-align: center;
     align-items: center; }
     .st-menu .nav-bottom ul li:first-child {
-      color: #15129d;
+      color: #2e546b;
       margin-right: 1em; }
     .st-menu .nav-bottom ul li:last-child {
       margin-left: auto; }
@@ -278,7 +419,7 @@ header {
         position: relative;
         left: -1px; }
     .st-menu .nav-bottom ul .circle-blue {
-      background-color: #4d8ee0; }
+      background-color: #4990e2; }
     .st-menu .nav-bottom ul .circle-green {
       background-color: #7ed224; }
   .st-menu .nav-bottom svg {
@@ -320,16 +461,16 @@ header {
   background-color: #d8d8d8; }
 
 .main-table .name-guest {
-  font-weight: normal;
-  font-family: FuturaDemiC, Arial, sans-serif; }
+  font-weight: 600;
+  font-family: "Source Sans Pro", Arial, sans-serif; }
 
 .main-table .email-guest a {
-  color: #7c7c7c; }
+  color: rgba(0, 0, 0, 0.5); }
 
 .main-table .process {
   margin: auto;
-  font-weight: normal;
-  font-family: FuturaDemiC, Arial, sans-serif; }
+  font-weight: 600;
+  font-family: "Source Sans Pro", Arial, sans-serif; }
 
 .time {
   margin: auto;
@@ -338,7 +479,7 @@ header {
 .table-title {
   margin-bottom: 1em; }
   .table-title .name, .table-title .process, .table-title .time {
-    color: #7c7c7c; }
+    color: rgba(0, 0, 0, 0.5); }
 
 .top-callendar {
   font-size: 1.25rem;
@@ -356,22 +497,22 @@ header {
 .with_callendar {
   font-size: 1.0em; }
   .with_callendar strong {
-    font-weight: normal;
-    font-family: FuturaDemiC, Arial, sans-serif; }
-  .with_callendar .callendar-dropdown {
-    color: #4c8dc3; }
+    font-weight: 600;
+    color: #4990e2; }
+    .with_callendar strong .callendar-dropdown {
+      font-family: "Source Sans Pro", Arial, sans-serif; }
   .with_callendar .date {
-    font-weight: normal;
-    font-family: FuturaBookC, "Arial Narrow", sans-serif;
+    font-weight: 400;
+    font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
     margin-left: 0.5em;
-    color: #7c7c7c; }
+    color: rgba(0, 0, 0, 0.5); }
   .with_callendar svg {
     position: relative;
     width: 7px; }
   .with_callendar .ui-datepicker-trigger {
     background-color: transparent;
     border: none;
-    color: #4c8dc3; }
+    color: #4990e2; }
 
 #ui-datepicker-div {
   background-color: #fff;
@@ -417,8 +558,8 @@ header {
   height: 30px;
   font-size: 12px;
   line-height: 24px;
-  font-family: FuturaBookC, "Arial Narrow", sans-serif;
-  color: #7c7c7c;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  color: rgba(0, 0, 0, 0.5);
   margin: auto; }
 
 #ui-datepicker-div a.ui-state-default {
@@ -426,7 +567,7 @@ header {
   border-color: transparent; }
 
 #ui-datepicker-div a.ui-state-default.ui-priority-secondary {
-  color: #cfcfcf;
+  color: rgba(0, 0, 0, 0.58);
   opacity: 1; }
 
 #ui-datepicker-div a.ui-state-default.ui-state-highlight {
@@ -459,7 +600,7 @@ header {
 
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
   text-indent: 0 !important;
-  color: #4c8dc3 !important;
+  color: #4990e2 !important;
   height: 100%;
   width: 100%;
   left: 0;
@@ -471,8 +612,8 @@ header {
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
   line-height: 35px;
   font-size: 1em;
-  font-weight: normal;
-  font-family: FuturaBookC, "Arial Narrow", sans-serif !important; }
+  font-weight: 400;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif !important; }
 
 .ui-datepicker .ui-datepicker-header {
   background-color: #fff;
@@ -481,8 +622,8 @@ header {
 .ui-datepicker-prev:hover span,
 .ui-datepicker-next:hover span {
   color: #3f67f7 !important;
-  font-family: FuturaBookC, "Arial Narrow", sans-serif !important;
-  font-weight: normal; }
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif !important;
+  font-weight: 400; }
 
 .ui-datepicker .ui-datepicker-next-hover {
   right: 2px; }
@@ -525,7 +666,7 @@ header {
     border-bottom: 18px solid #fbfbfb;
     /* Добавляем треугольник */ }
   .loading-div .loading-text {
-    color: #7c7c7c;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 0.75em;
     margin: auto;
     width: 100%;
@@ -537,8 +678,8 @@ header {
 
 .bottom-paginator {
   margin-top: 1em;
-  font-weight: normal;
-  font-family: FuturaBookC, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

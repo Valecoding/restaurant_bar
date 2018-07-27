@@ -5,14 +5,13 @@
     <title>Название сайта</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="favicon.ico"/> <!--todo сгенерировать иконску-->
-    <link href="https://fonts.googleapis.com/css?family=Rubik&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
     <link rel="stylesheet" type="text/css" href="libs/nav/component.css"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/media.css"/>
     <!--<script>

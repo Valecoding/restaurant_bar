@@ -1,27 +1,47 @@
-$nav_active_a: #15129d;
-$nav_a: #a49fc8;
-$links_a: #4c8dc3;
-$nav_bg: #f5f5f5;
-$greylight1: #fbfbfb;//loading... bg
-$greylight2: #e1e1e1;//search
-$greylight_hr: #e2e2e2;
-$greydark: #d8d8d8;//avatar_bg
-$text_mute: #7c7c7c;
+//colors main
 $white: #fff;
 $black: #000;
-$blue: #4d8ee0;
+$blue: #4990e2;//rgba(73, 144, 226, 1)
+$bluesky: rgba(73, 144, 226, .1);
 $green: #7ed224;
+$greylight1: #fbfbfb; //loading... bg
+$greylight2: #e1e1e1; //search
+$greydark: #d8d8d8; //avatar_bg
+
+$nav_active_a: #2e546b;
+$nav_a: rgba(46,84,107,0.4);
+$links_a: $blue;
+$nav_bg: #f5f5f5;
+$sidebar_bg: rgba(245,245,245,.3);
+$greylight_hr: #e2e2e2;
+
+$text_mute: rgba(0,0,0,0.5);//тот что темнее
+$text_mute2: rgba(0,0,0,0.58);// светлее
+$text_mute3: rgba(0,0,0,0.3);// самое светлое
+
 $logo_color: #d9e0e8;
 
-$fontFuturaC: FuturaBookC, "Arial Narrow", sans-serif;
-$fontFuturaDemiC: FuturaDemiC, Arial, sans-serif;
+$nav-events-color-text: $blue;
+$nav-events-color-bg: $bluesky;
+$sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg: $white;
+$sidebar-events-text: $black;
+$sidebar-events-text-active: $white;
 
-$nav-mobile-top:64px;
+
+$fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
+$fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
+$fontRegular: 400;
+$fontSemiBold:600;
+$fontBold:700;
+$fontlight:300;
+
+$nav-mobile-top: 64px;
 
 $nav-panel-width: 280px;
 
-$av-guest-width: 35px;//avatar of guest width/height
-$av-width: 35px;//avatar of the user width/height
+$av-guest-width: 35px; //avatar of guest width/height
+$av-width: 35px; //avatar of the user width/height
 
 $font_section_title: 1.25rem;
 

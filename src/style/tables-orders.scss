@@ -1,23 +1,42 @@
 @import url(../libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css);
 //общие переменные
-$nav_active_a: #15129d;
-$nav_a: #a49fc8;
-$links_a: #4c8dc3;
-$nav_bg: #f5f5f5;
-$greylight1: #fbfbfb; //loading... bg; dashboard top
-$greylight2: #e1e1e1; //search
-$greylight_hr: #e2e2e2;
-$greydark: #d8d8d8; //avatar_bg
-$text_mute: #7c7c7c;
-$text_mute2: #cfcfcf;
+//colors main
 $white: #fff;
 $black: #000;
-$blue: #4d8ee0;
+$blue: #4990e2;//rgba(73, 144, 226, 1)
+$bluesky: rgba(73, 144, 226, .1);
 $green: #7ed224;
+$greylight1: #fbfbfb; //loading... bg
+$greylight2: #e1e1e1; //search
+$greydark: #d8d8d8; //avatar_bg
+
+$nav_active_a: #2e546b;
+$nav_a: rgba(46,84,107,0.4);
+$links_a: $blue;
+$nav_bg: #f5f5f5;
+$sidebar_bg: rgba(245,245,245,.3);
+$greylight_hr: #e2e2e2;
+
+$text_mute: rgba(0,0,0,0.5);//тот что темнее
+$text_mute2: rgba(0,0,0,0.58);// светлее
+$text_mute3: rgba(0,0,0,0.3);// самое светлое
+
 $logo_color: #d9e0e8;
 
-$fontFuturaC: FuturaBookC, "Arial Narrow", sans-serif;
-$fontFuturaDemiC: FuturaDemiC, Arial, sans-serif;
+$nav-events-color-text: $blue;
+$nav-events-color-bg: $bluesky;
+$sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg: $white;
+$sidebar-events-text: $black;
+$sidebar-events-text-active: $white;
+
+
+$fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
+$fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
+$fontRegular: 400;
+$fontSemiBold:600;
+$fontBold:700;
+$fontlight:300;
 
 $nav-mobile-top: 64px;
 
@@ -27,6 +46,7 @@ $av-guest-width: 35px; //avatar of guest width/height
 $av-width: 35px; //avatar of the user width/height
 
 $font_section_title: 1.25rem;
+
 
 //к страницам с рабочим столом
 
@@ -52,11 +72,11 @@ $avatar_waiters_status_offline: red;
     color: $black;
   }
   .info.big-text {
-    font-family: $fontFuturaDemiC;
+    font-family: $fontFSemiBold;
     font-size: $font_big_size;
   }
   .info.small-text {
-    font-family: $fontFuturaC;
+    font-family: $fontFmainRegular;
     font-size: $font_small_size;
     margin-bottom: 1em;
   }
@@ -107,12 +127,12 @@ $avatar_waiters_status_offline: red;
 .title-section {
   margin-top: 1em;
   font-size: $font_section_title;
-  font-family: $fontFuturaDemiC;
+  font-family: $fontFSemiBold;
   margin-right: 1em;
 
   &-link{
     font-size: 1rem;
-    font-family:$fontFuturaC;
+    font-family:$fontFmainRegular;
 
   }
 }
@@ -148,10 +168,10 @@ $avatar_waiters_status_offline: red;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-start;
-        font-family: $fontFuturaDemiC;
+        font-family: $fontFSemiBold;
       }
       .zakaz-title {
-        font-family: $fontFuturaDemiC;
+        font-family: $fontFSemiBold;
       }
       .link {
         margin-right: 2em;

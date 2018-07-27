@@ -9,15 +9,15 @@
   .dashboard.top .info {
     color: #000; }
   .dashboard.top .info.big-text {
-    font-family: FuturaDemiC, Arial, sans-serif;
+    font-family: "Source Sans Pro", Arial, sans-serif;
     font-size: 30px; }
   .dashboard.top .info.small-text {
-    font-family: FuturaBookC, "Arial Narrow", sans-serif;
+    font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
     font-size: 18px;
     margin-bottom: 1em; }
   .dashboard.top .total_number {
     font-size: 18px;
-    color: #cfcfcf; }
+    color: rgba(0, 0, 0, 0.58); }
     .dashboard.top .total_number:before {
       content: '/'; }
   .dashboard.top .info.waiter-info {
@@ -59,11 +59,11 @@
 .title-section {
   margin-top: 1em;
   font-size: 1.25rem;
-  font-family: FuturaDemiC, Arial, sans-serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
   margin-right: 1em; }
   .title-section-link {
     font-size: 1rem;
-    font-family: FuturaBookC, "Arial Narrow", sans-serif; }
+    font-family: "Source Sans Pro", "Arial Narrow", sans-serif; }
 
 .active-orders .orders-wrapper {
   overflow: hidden; }
@@ -114,13 +114,13 @@
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
-      font-family: FuturaDemiC, Arial, sans-serif; }
+      font-family: "Source Sans Pro", Arial, sans-serif; }
     .active-orders .orders li .zakaz-title {
-      font-family: FuturaDemiC, Arial, sans-serif; }
+      font-family: "Source Sans Pro", Arial, sans-serif; }
     .active-orders .orders li .link {
       margin-right: 2em; }
     .active-orders .orders li .status {
-      color: #cfcfcf; }
+      color: rgba(0, 0, 0, 0.58); }
 
 .hall_layout_wrapper {
   min-height: 300px;

@@ -1,21 +1,40 @@
-$nav_active_a: #15129d;
-$nav_a: #a49fc8;
-$links_a: #4c8dc3;
-$nav_bg: #f5f5f5;
-$greylight1: #fbfbfb; //loading... bg
-$greylight2: #e1e1e1; //search
-$greylight_hr: #e2e2e2;
-$greydark: #d8d8d8; //avatar_bg
-$text_mute: #7c7c7c;
-$text_mute2: #cfcfcf;
+//colors main
 $white: #fff;
 $black: #000;
-$blue: #4d8ee0;
+$blue: #4990e2;//rgba(73, 144, 226, 1)
+$bluesky: rgba(73, 144, 226, .1);
 $green: #7ed224;
+$greylight1: #fbfbfb; //loading... bg
+$greylight2: #e1e1e1; //search
+$greydark: #d8d8d8; //avatar_bg
+
+$nav_active_a: #2e546b;
+$nav_a: rgba(46,84,107,0.4);
+$links_a: $blue;
+$nav_bg: #f5f5f5;
+$sidebar_bg: rgba(245,245,245,.3);
+$greylight_hr: #e2e2e2;
+
+$text_mute: rgba(0,0,0,0.5);//тот что темнее
+$text_mute2: rgba(0,0,0,0.58);// светлее
+$text_mute3: rgba(0,0,0,0.3);// самое светлое
+
 $logo_color: #d9e0e8;
 
-$fontFuturaC: FuturaBookC, "Arial Narrow", sans-serif;
-$fontFuturaDemiC: FuturaDemiC, Arial, sans-serif;
+$nav-events-color-text: $blue;
+$nav-events-color-bg: $bluesky;
+$sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg: $white;
+$sidebar-events-text: $black;
+$sidebar-events-text-active: $white;
+
+
+$fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
+$fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
+$fontRegular: 400;
+$fontSemiBold:600;
+$fontBold:700;
+$fontlight:300;
 
 $nav-mobile-top: 64px;
 
@@ -25,6 +44,18 @@ $av-guest-width: 35px; //avatar of guest width/height
 $av-width: 35px; //avatar of the user width/height
 
 $font_section_title: 1.25rem;
+
+$border-radius: 3px;
+
+//к страницам с рабочим столом
+
+$av_waiters_bg: #f3f3f3;
+$avatar_waiters_size: 35px;
+$font_small_size: 18px;
+$font_big_size: 30px;
+$avatar_waiters_status: 8px;
+$avatar_waiters_status_online: #73d600;
+$avatar_waiters_status_offline: red;
 
 .col-1, .col-2, .col-3,
 .col-4, .col-5, .col-6,
@@ -106,8 +137,8 @@ body, html {
   border: 0;
   font: {
     size: 100%;
-    family: $fontFuturaC;
-    weight: normal;
+    family: $fontFmainRegular;
+    weight: $fontRegular;
   }
   line-height: 1.2;
   background-color: $white;
@@ -168,6 +199,9 @@ header {
   align-items: stretch;
   justify-content: space-between;
   z-index: 95;
+  .logo img{
+    height: calc(#{$nav-mobile-top} - 4px);
+  }
 }
 
 ///fabar icon block start
@@ -179,7 +213,7 @@ header {
   text-align: center;
   white-space: nowrap;
   cursor: pointer;
-  padding: 20px 0;
+  padding: 18px 0;
   border: transparent;
 }
 
@@ -243,7 +277,7 @@ header {
   display: flex;
   flex-direction: column;
 
-  padding: 1em 1em 1em 2em;
+  padding: 1.35em 1.35em 1.35em 2.4em;
   width: $nav-panel-width;
   overflow-y: auto;
   background: $nav_bg;
@@ -251,9 +285,12 @@ header {
     margin-top: 1em;
     margin-bottom: 3em;
   }
-  .logo svg {
+/*  .logo svg {
     height: 40px;
     width: 40px;
+  }*/
+  .logo img{
+    margin-left: -1em;
   }
   .user {
     color: $black;
@@ -262,17 +299,25 @@ header {
     .user-name {
       line-height: $av-width;
       color: $black;
+      float: left;
+      width: calc(100% - #{$av-width});
+
+      span {
+        float: right;
+        margin-right: 1em;
+      }
     }
     .avatar {
       display: block;
-      float: left;
-      margin-right: 0.75em;
+      float: right;
+      //margin-right: 0.75em;
       border-radius: 50%;
 
       width: $av-width;
       height: $av-width;
       background-color: $greydark;
     }
+
     svg {
       color: $text_mute;
       padding-top: 1px;
@@ -280,6 +325,7 @@ header {
     }
   }
 }
+
 
 .st-menu ul li a,
 .st-menu ul li:first-child a {
@@ -289,11 +335,12 @@ header {
 }
 
 .st-menu ul li a {
-  font-family: $fontFuturaC;
+  font-family: $fontFmainRegular;
   color: $nav_a;
   text-transform: inherit;
   padding: 0.6em 0;
-  letter-spacing: -0.5px;
+  letter-spacing: 0;
+  font-weight: $fontRegular;
 }
 
 .st-menu ul li a:hover,
@@ -301,8 +348,117 @@ header {
 .st-menu ul li a:focus,
 .st-menu ul li a.active {
   color: $nav_active_a;
+  font-family:$fontFSemiBold;
+  font-weight:$fontSemiBold;
   background-color: transparent;
 }
+.st-menu .notification{
+  margin-left: 1em;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  font-size: 14px;
+  border-radius: $border-radius;
+  text-align: center;
+}
+.st-menu li.obzor,
+.st-menu .callendar,
+.st-menu .chat{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
+}
+
+.st-menu .chat{
+  justify-content: space-between;
+  margin-right: 0.5em;
+}
+
+.st-menu li.obzor a{
+  width: 60px;
+}
+.btn{
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: $border-radius;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.st-menu .input-group{
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+
+  background-color: $white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  .form-control{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $black;
+    background-color: $white;
+    background-clip: padding-box;
+    border-radius: $border-radius;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: transparent;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .input-group-append{
+    margin-left: -1px;
+    display: flex;
+    .btn-nav-search{
+      width: 40px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      position: relative;
+      z-index: 2;
+      color:  rgba(151, 151, 151, 0.2);
+      background-color: transparent;
+      background-image: none;
+      padding: 7px 8px 0;
+    }
+    .btn-nav-search:hover{
+    color: rgba(151, 151, 151, 1);
+    }
+  }
+  }
+
+.st-menu .navbar-task{
+  background-color: $nav-events-color-bg;
+  color: $nav-events-color-text;
+  width: 66px;
+}
+.st-menu .chat-events{
+  background-color: $nav-events-color-bg;
+  color: $nav-events-color-text;
+}
+
+.st-menu .navbar-calendar-events{
+  background-color: $blue;
+  color: $white;
+}
+
 
 .st-menu .nav-bottom {
   margin-top: auto;
@@ -391,16 +547,16 @@ header {
     background-color: $greydark;
   }
   .name-guest {
-    font-weight: normal;
-    font-family: $fontFuturaDemiC;
+    font-weight: $fontSemiBold;
+    font-family: $fontFSemiBold;
   }
   .email-guest a {
     color: $text_mute;
   }
   .process {
     margin: auto;
-    font-weight: normal;
-    font-family: $fontFuturaDemiC;
+    font-weight: $fontSemiBold;
+    font-family: $fontFSemiBold;
   }
 }
 
@@ -431,15 +587,15 @@ header {
 .with_callendar {
   font-size: 1.0em;
   strong {
-    font-weight: normal;
-    font-family: $fontFuturaDemiC;
-  }
+    font-weight: $fontSemiBold;
   .callendar-dropdown {
+    font-family: $fontFSemiBold;
+  }
     color: $links_a;
   }
   .date {
-    font-weight: normal;
-    font-family: $fontFuturaC;
+    font-weight: $fontRegular;
+    font-family: $fontFmainRegular;
     margin-left: 0.5em;
     color: $text_mute;
   }
@@ -497,7 +653,7 @@ header {
   height: 30px;
   font-size: 12px;
   line-height: 24px;
-  font-family: $fontFuturaC;
+  font-family: $fontFmainRegular;
   color: $text_mute;
   margin: auto;
 }
@@ -553,8 +709,8 @@ header {
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
   line-height: 35px;
   font-size: 1em;
-  font-weight: normal;
-  font-family: $fontFuturaC!important;
+  font-weight: $fontRegular;
+  font-family: $fontFmainRegular!important;
 }
 .ui-datepicker .ui-datepicker-header{
   background-color: $white;
@@ -563,8 +719,8 @@ header {
 .ui-datepicker-prev:hover span,
 .ui-datepicker-next:hover span{
   color: #3f67f7!important;
-  font-family: $fontFuturaC!important;
-  font-weight: normal;
+  font-family: $fontFmainRegular!important;
+  font-weight: $fontRegular;
 
 }
 .ui-datepicker .ui-datepicker-next-hover{
@@ -623,8 +779,8 @@ header {
 
 .bottom-paginator {
   margin-top: 1em;
-  font-weight: normal;
-  font-family: $fontFuturaC;
+  font-weight: $fontRegular;
+  font-family: $fontFmainRegular;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
