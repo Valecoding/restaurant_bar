@@ -1,7 +1,7 @@
 //colors main
 $white: #fff;
 $black: #000;
-$blue: #4990e2;//rgba(73, 144, 226, 1)
+$blue: #4990e2; //rgba(73, 144, 226, 1)
 $bluesky: rgba(73, 144, 226, .1);
 $green: #7ed224;
 $greylight1: #fbfbfb; //loading... bg
@@ -9,20 +9,22 @@ $greylight2: #e1e1e1; //search
 $greydark: #d8d8d8; //avatar_bg
 
 $nav_active_a: #2e546b;
-$nav_a: rgba(46,84,107,0.4);
+$nav_a: rgba(46, 84, 107, 0.4);
 $links_a: $blue;
 $nav_bg: #f5f5f5;
-$sidebar_bg: rgba(245,245,245,.3);
+$sidebar_bg: rgba(245, 245, 245, 0.5);
 $greylight_hr: #e2e2e2;
 
-$text_mute: rgba(0,0,0,0.5);//тот что темнее
-$text_mute2: rgba(0,0,0,0.58);// светлее
-$text_mute3: rgba(0,0,0,0.3);// самое светлое
+$text_mute: rgba(0, 0, 0, 0.5); //тот что темнее
+$text_mute2: rgba(0, 0, 0, 0.58); // светлее
+$text_mute3: rgba(0, 0, 0, 0.3); // самое светлое
+$text_mute4: rgba(0, 0, 0, 0.2); // самое самое светлое
 
 $logo_color: #d9e0e8;
 
 $nav-events-color-text: $blue;
 $nav-events-color-bg: $bluesky;
+$sidebar-events-color-bg-active: $blue;
 $sidebar-events-color-bg-active: $blue;
 $sidebar-events-color-bg: $white;
 $sidebar-events-text: $black;
@@ -32,9 +34,9 @@ $sidebar-events-text-active: $white;
 $fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
 $fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
 $fontRegular: 400;
-$fontSemiBold:600;
-$fontBold:700;
-$fontlight:300;
+$fontSemiBold: 600;
+$fontBold: 700;
+$fontlight: 300;
 
 $nav-mobile-top: 64px;
 
@@ -43,7 +45,27 @@ $nav-panel-width: 280px;
 $av-guest-width: 35px; //avatar of guest width/height
 $av-width: 35px; //avatar of the user width/height
 
-$font_section_title: 1.25rem;
+$font_section_title: 1.125rem;
+
+$border-radius: 3px;
+
+//к страницам с рабочим столом (для индекса.штмл отличается чем столі и заказы  todo проверить)
+
+$av_waiters_bg: #f3f3f3; //todo not used on this page
+$avatar_waiters_size: 35px; //todo not used on this page
+$font_small_size: 14px;
+$font_big_size: 18px;
+$avatar_waiters_status: 8px; //todo not used on this page
+$avatar_waiters_status_online: #73d600; //todo not used on this page
+$avatar_waiters_status_offline: red; //todo not used on this page
+
+//к истории активности посетителей !!!!!!!!только медиазапросах для десктопной версии !!!!!!
+$title-guest-name-pl: 2.75rem;//отступ слева й колонка
+$title-guest-name-pr: $title-guest-name-pl;//отступ слева й колонка
+$title-guest-process-pl: 2.25rem;//отступ слева й колонка
+$title-guest-process-pr: 1.15rem;//отступ слева й колонка
+$title-guest-time-pl: 1.15rem;//отступ слева й колонка
+$title-guest-time-pr: 1.15rem;//отступ слева й колонка
 
 
 /*==========  Mobile First Method  ==========*/
@@ -70,8 +92,15 @@ $font_section_title: 1.25rem;
   .row {
     display: flex;
   }
-  .with_callendar{
-    font-size:1.25em;}
+
+  //sidbar tasks styling
+  .tasks{
+    ul li{
+      //max-width: calc(#{$sidebar-width} - 4em);
+      width: 100%;
+    }}
+
+
 
   //calendar styling
   //styling callendar
@@ -92,6 +121,50 @@ $font_section_title: 1.25rem;
     border: transparent;
     margin: 0px;
   }
+  .hr-col{
+    padding-left: $title-guest-process-pl;
+    padding-right: $title-guest-name-pr;
+  }
+  .hr-col.-two{
+    padding-left: $title-guest-process-pl;
+    padding-right: $title-guest-time-pr;
+  }
+  .top-callendar-row{
+    padding-left: $title-guest-process-pl;
+    padding-right: $title-guest-time-pr;
+  }
+  .table-title .name,
+  .main-table .name{
+    position: relative;
+    padding-left: $title-guest-name-pl;
+    padding-right: $title-guest-name-pr;
+  }
+  .table-title .process,
+  .main-table .process{
+    padding-left: $title-guest-process-pl;
+    padding-right: $title-guest-process-pr;
+  }
+  .table-title .time,
+  .main-table .time{
+    padding-left: $title-guest-time-pl;
+    padding-right: $title-guest-time-pr;
+  }
+  .main-table {
+    .avatar-guest {
+      right: -$av-guest-width/2;
+    }
+}
+
+  .main-table .item {
+    .hr {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(66.66% - #{$title-guest-process-pr} - #{$title-guest-process-pl});
+      margin: 0 $title-guest-process-pr;
+    }
+  }
+
 }
 
 /* md-устройства (больше или равно 768px) */
@@ -128,7 +201,11 @@ $font_section_title: 1.25rem;
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
   /* CSS для: ширины >= 1200px */
-
+.st-container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
 }
 
 //@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

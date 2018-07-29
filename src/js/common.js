@@ -18,8 +18,11 @@ let x = document.getElementById('demo');
 const psevdoLi = () => {
     let mark, container, ordersList;
     container = document.querySelector('.orders>li:last-of-type');
-    mark = `<li class='no-id' style='width: 1px; background-color: transparent; -webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none ; margin-right: 0; padding: 0;'></li>`;
-    container.insertAdjacentHTML('afterend', mark);
+    if(container){
+        mark = `<li class='no-id' style='width: 1px; background-color: transparent; -webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none ; margin-right: 0; padding: 0;'></li>`;
+        container.insertAdjacentHTML('afterend', mark);
+    }
+
 };
 psevdoLi();
 
@@ -114,6 +117,19 @@ $(document).ready(function () {
             }
         }
     });
+
+    //check status of the check box
+    // todo сделать изменение класса статуса нот дота при клике чекбокса
+  // function checkboxChangeNoteDot() {
+  //       let conteiner;
+  //       conteiner = document.querySelector('.checkboxes-container');
+  //       conteiner.addEventListener('click', e => {
+  //          if(e.target == ''
+  //       });
+  //     if(document.querySelector('.notification-group')){
+  //
+  //     }
+  // }
 
 });
 

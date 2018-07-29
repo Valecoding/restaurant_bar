@@ -1,7 +1,7 @@
 //colors main
 $white: #fff;
 $black: #000;
-$blue: #4990e2;//rgba(73, 144, 226, 1)
+$blue: #4990e2; //rgba(73, 144, 226, 1)
 $bluesky: rgba(73, 144, 226, .1);
 $green: #7ed224;
 $greylight1: #fbfbfb; //loading... bg
@@ -9,32 +9,33 @@ $greylight2: #e1e1e1; //search
 $greydark: #d8d8d8; //avatar_bg
 
 $nav_active_a: #2e546b;
-$nav_a: rgba(46,84,107,0.4);
+$nav_a: rgba(46, 84, 107, 0.4);
 $links_a: $blue;
 $nav_bg: #f5f5f5;
-$sidebar_bg: rgba(245,245,245,.3);
+$sidebar_bg: rgba(245, 245, 245, 0.5);
 $greylight_hr: #e2e2e2;
 
-$text_mute: rgba(0,0,0,0.5);//тот что темнее
-$text_mute2: rgba(0,0,0,0.58);// светлее
-$text_mute3: rgba(0,0,0,0.3);// самое светлое
+$text_mute: rgba(0, 0, 0, 0.5); //тот что темнее
+$text_mute2: rgba(0, 0, 0, 0.58); // светлее
+$text_mute3: rgba(0, 0, 0, 0.3); // самое светлое
+$text_mute4: rgba(0, 0, 0, 0.2); // самое самое светлое
 
 $logo_color: #d9e0e8;
 
 $nav-events-color-text: $blue;
 $nav-events-color-bg: $bluesky;
 $sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg-active: $blue;
 $sidebar-events-color-bg: $white;
 $sidebar-events-text: $black;
 $sidebar-events-text-active: $white;
 
-
 $fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
 $fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
 $fontRegular: 400;
-$fontSemiBold:600;
-$fontBold:700;
-$fontlight:300;
+$fontSemiBold: 600;
+$fontBold: 700;
+$fontlight: 300;
 
 $nav-mobile-top: 64px;
 
@@ -43,19 +44,27 @@ $nav-panel-width: 280px;
 $av-guest-width: 35px; //avatar of guest width/height
 $av-width: 35px; //avatar of the user width/height
 
-$font_section_title: 1.25rem;
+$font_section_title: 1.125rem;
 
 $border-radius: 3px;
 
-//к страницам с рабочим столом
+//к страницам с рабочим столом (для индекса.штмл отличается чем столі и заказы  todo проверить)
 
-$av_waiters_bg: #f3f3f3;
-$avatar_waiters_size: 35px;
-$font_small_size: 18px;
-$font_big_size: 30px;
-$avatar_waiters_status: 8px;
-$avatar_waiters_status_online: #73d600;
-$avatar_waiters_status_offline: red;
+$av_waiters_bg: #f3f3f3; //todo not used on this page
+$avatar_waiters_size: 35px; //todo not used on this page
+$font_small_size: 14px;
+$font_big_size: 18px;
+$avatar_waiters_status: 8px; //todo not used on this page
+$avatar_waiters_status_online: #73d600; //todo not used on this page
+$avatar_waiters_status_offline: red; //todo not used on this page
+
+//к истории активности посетителей для мобильной версии
+$title-guest-name-pl: 2rem; //отступ слева й колонка
+$title-guest-name-pr: $title-guest-name-pl; //отступ слева й колонка
+$title-guest-process-pl: 2rem; //отступ слева й колонка
+$title-guest-process-pr: 2rem; //отступ слева й колонка
+$title-guest-time-pl: 2rem; //отступ слева й колонка
+$title-guest-time-pr: 2rem; //отступ слева й колонка
 
 .col-1, .col-2, .col-3,
 .col-4, .col-5, .col-6,
@@ -146,7 +155,7 @@ body, html {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .d-mobil-none {
@@ -181,6 +190,11 @@ a:focus, button:focus {
   outline: none;
 }
 
+a:focus,
+a:hover {
+  color: blue;
+}
+
 header {
   min-height: 60px;
 }
@@ -199,7 +213,7 @@ header {
   align-items: stretch;
   justify-content: space-between;
   z-index: 95;
-  .logo img{
+  .logo img {
     height: calc(#{$nav-mobile-top} - 4px);
   }
 }
@@ -265,9 +279,11 @@ header {
 
 //main section
 //history full
+
+//todo ОБЩИЙ КОД НА ВСЕ
 .for-mobile {
   width: 100%;
-  height: calc(#{$nav-mobile-top} - 1em);
+  height: $nav-mobile-top; //убрал паддинг из калька потому что убрал паддинги в общем для майдбара
   background-color: transparent;
 }
 
@@ -285,11 +301,11 @@ header {
     margin-top: 1em;
     margin-bottom: 3em;
   }
-/*  .logo svg {
-    height: 40px;
-    width: 40px;
-  }*/
-  .logo img{
+  /*  .logo svg {
+      height: 40px;
+      width: 40px;
+    }*/
+  .logo img {
     margin-left: -1em;
   }
   .user {
@@ -326,7 +342,6 @@ header {
   }
 }
 
-
 .st-menu ul li a,
 .st-menu ul li:first-child a {
   -webkit-box-shadow: none;
@@ -348,11 +363,12 @@ header {
 .st-menu ul li a:focus,
 .st-menu ul li a.active {
   color: $nav_active_a;
-  font-family:$fontFSemiBold;
-  font-weight:$fontSemiBold;
+  font-family: $fontFSemiBold;
+  font-weight: $fontSemiBold;
   background-color: transparent;
 }
-.st-menu .notification{
+
+.st-menu .notification {
   margin-left: 1em;
   height: 22px;
   width: 22px;
@@ -361,9 +377,10 @@ header {
   border-radius: $border-radius;
   text-align: center;
 }
+
 .st-menu li.obzor,
 .st-menu .callendar,
-.st-menu .chat{
+.st-menu .chat {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -374,15 +391,16 @@ header {
   flex-basis: 100%;
 }
 
-.st-menu .chat{
+.st-menu .chat {
   justify-content: space-between;
   margin-right: 0.5em;
 }
 
-.st-menu li.obzor a{
+.st-menu li.obzor a {
   width: 60px;
 }
-.btn{
+
+.btn {
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -396,9 +414,10 @@ header {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: $border-radius;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-.st-menu .input-group{
+
+.st-menu .input-group {
   margin-top: 30px;
   position: relative;
   width: 100%;
@@ -408,7 +427,7 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: stretch;
-  .form-control{
+  .form-control {
     display: block;
     width: 100%;
     height: 40px;
@@ -422,43 +441,43 @@ header {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: transparent;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
-  .input-group-append{
+  .input-group-append {
     margin-left: -1px;
     display: flex;
-    .btn-nav-search{
+    .btn-nav-search {
       width: 40px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       position: relative;
       z-index: 2;
-      color:  rgba(151, 151, 151, 0.2);
+      color: rgba(151, 151, 151, 0.2);
       background-color: transparent;
       background-image: none;
       padding: 7px 8px 0;
     }
-    .btn-nav-search:hover{
-    color: rgba(151, 151, 151, 1);
+    .btn-nav-search:hover {
+      color: rgba(151, 151, 151, 1);
     }
   }
-  }
+}
 
-.st-menu .navbar-task{
+.st-menu .navbar-task {
   background-color: $nav-events-color-bg;
   color: $nav-events-color-text;
   width: 66px;
 }
-.st-menu .chat-events{
+
+.st-menu .chat-events {
   background-color: $nav-events-color-bg;
   color: $nav-events-color-text;
 }
 
-.st-menu .navbar-calendar-events{
+.st-menu .navbar-calendar-events {
   background-color: $blue;
   color: $white;
 }
-
 
 .st-menu .nav-bottom {
   margin-top: auto;
@@ -517,29 +536,87 @@ header {
   z-index: 99;
 }
 
+////////////////
+//контент справа
+
+//todo Общий для всех сайдабар?
+//псевдо сайдбар
+.st-content-inner .psevdosidebar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .bg-sidebar {
+    background-color: $sidebar_bg;
+  }
+}
+
+//конец псевдосайдбара
+
+//todo общий для всех настройки
+//рестайлинг основного контента
 .st-content {
   overflow-y: scroll;
-  background: $white;
+  //background: $white; //не нужно для псевдосайдбара
+  background: transparent; // нужно для псевдосайдбара
 }
 
 .st-content, .st-content-inner {
   position: relative;
-  padding: 1em;
+  //padding: 1em; //избаляемся ради псевдойдбара
+  padding: 0; //для псевдойдбара
   line-height: 1.2;
 }
 
+//end of restyling content
+
+.table-title .name,
+.main-table .name {
+  position: relative;
+  padding-left: $title-guest-name-pl;
+  padding-right: $title-guest-name-pr;
+}
+
+.table-title .process,
+.main-table .process {
+  padding-left: $title-guest-process-pl;
+  padding-right: $title-guest-process-pr;
+}
+
+.table-title .time,
+.main-table .time {
+  padding-left: $title-guest-time-pl;
+  padding-right: $title-guest-time-pr;
+}
+
 .main-table {
+
   .item {
+    position: relative;
     $padding_margin: 0.75em;
-    border-top: 1px solid $greylight_hr;
+    //border-top: 1px solid $greylight_hr;
     padding-top: $padding_margin;
     margin-top: $padding_margin;
+    .hr {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: calc(100% - #{$title-guest-process-pr} - #{$title-guest-process-pl});
+      margin: 0 $title-guest-process-pr;
 
+    }
+  }
+  .item:first-child .hr{
+    display: none;
+  }
+  .sub-item {
+    margin-top: 0.75em;
   }
   .avatar-guest {
     display: block;
-    float: left;
-    margin-right: 0.75em;
+    position: absolute;
+    right: 2em;
+    //margin-right: 0.75em;
     border-radius: 50%;
 
     width: $av-guest-width;
@@ -547,22 +624,34 @@ header {
     background-color: $greydark;
   }
   .name-guest {
-    font-weight: $fontSemiBold;
-    font-family: $fontFSemiBold;
+    font-weight: $fontRegular;
+    font-family: $fontFmainRegular;
   }
   .email-guest a {
     color: $text_mute;
   }
   .process {
-    margin: auto;
-    font-weight: $fontSemiBold;
-    font-family: $fontFSemiBold;
-  }
-}
+    //margin: auto;
+    font-weight: $fontRegular;
+    font-family: $fontFmainRegular;
 
-.time {
-  margin: auto;
-  text-align: right;
+  }
+  .time {
+    margin: 0 auto;
+    text-align: right;
+  }
+  .process, .time {
+    ul {
+      padding-top: 0.5em;
+    }
+    ul li:first-child {
+      margin-top: 0;
+    }
+    ul li {
+      margin-top: 2em;
+    }
+
+  }
 }
 
 .table-title {
@@ -572,25 +661,30 @@ header {
   margin-bottom: 1em;
 }
 
+.history-wrapper {
+  width: 100%;
+  padding: 2em 0;
+}
+
 .top-callendar {
   font-size: $font_section_title;
   align-items: baseline;
-  justify-content: space-between;
+  //justify-content: space-between;
 }
 
 .with_callendar,
 .link_full_history {
+  font-size: $font_section_title;
   margin-bottom: 0.75em;
   //position: relative;
 }
 
 .with_callendar {
-  font-size: 1.0em;
   strong {
     font-weight: $fontSemiBold;
-  .callendar-dropdown {
-    font-family: $fontFSemiBold;
-  }
+    .callendar-dropdown {
+      font-family: $fontFSemiBold;
+    }
     color: $links_a;
   }
   .date {
@@ -603,28 +697,38 @@ header {
     position: relative;
     width: 7px;
   }
-  .ui-datepicker-trigger{
+  .ui-datepicker-trigger {
     background-color: transparent;
-    border:none;
+    border: none;
     color: $links_a;
   }
 }
+
+.top-callendar-row {
+  justify-content: space-between;
+  padding-left: $title-guest-process-pl;
+  padding-right: $title-guest-time-pr;
+  margin-bottom: 1em;
+}
+
+//todo стили календаря
 //styling callendar
-#ui-datepicker-div{
+#ui-datepicker-div {
   background-color: #fff;
   box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.06) !important;
   width: 300px;
-  height: 260px;
+  height: 250px;
   position: absolute;
 
-  top: 50%!important;
-  left:50% !important;
+  top: 50% !important;
+  left: 50% !important;
   margin-top: 153px;
   margin-left: -150px;
   z-index: 90 !important;
   border-radius: 0;
   border: transparent;
 }
+
 #ui-datepicker-div:after {
   content: '';
   position: absolute;
@@ -637,15 +741,19 @@ header {
   border-collapse: inherit;
   transform-origin: 0 0;
 }
-.ui-datepicker{
+
+.ui-datepicker {
   padding: 0.8em;
 }
-.ui-datepicker td{
+
+.ui-datepicker td {
   padding: 0;
 }
-#ui-datepicker-div > table > thead{
+
+#ui-datepicker-div > table > thead {
   display: none;
 }
+
 #ui-datepicker-div tbody a {
   text-align: center !important;
   border-radius: 100%;
@@ -657,46 +765,57 @@ header {
   color: $text_mute;
   margin: auto;
 }
-#ui-datepicker-div a.ui-state-default{
+
+#ui-datepicker-div a.ui-state-default {
   background-color: $white;
   border-color: transparent;
 }
-#ui-datepicker-div a.ui-state-default.ui-priority-secondary{
-  color: $text_mute2;
+
+#ui-datepicker-div a.ui-state-default.ui-priority-secondary {
+  color: $text_mute3;
   opacity: 1;
 }
-#ui-datepicker-div a.ui-state-default.ui-state-highlight{
+
+#ui-datepicker-div a.ui-state-default.ui-state-highlight {
   color: $white;
   background-color: #7397f7;
-  border:1px solid #7397f7;
+  border: 1px solid #7397f7;
 }
+
 #ui-datepicker-div a.ui-state-default.ui-state-active,
-#ui-datepicker-div a.ui-state-default.ui-state-hover{
+#ui-datepicker-div a.ui-state-default.ui-state-hover {
   color: $white;
   background-color: #3f67f7;
-  border:1px solid #3f67f7;
+  border: 1px solid #3f67f7;
 }
-.ui-datepicker-year{
+
+.ui-datepicker-year {
   display: none;
 }
 
-.ui-icon{
+.ui-icon {
   width: 40px;
   height: 18px;
 }
+
 .ui-widget-header .ui-icon,
-.ui-widget-content .ui-icon{
+.ui-widget-content .ui-icon {
   background: transparent;
 }
-.ui-datepicker .ui-datepicker-next span{
+
+.ui-datepicker .ui-datepicker-next span {
   text-align: right;
+  padding-right: 10px;
 }
-.ui-datepicker .ui-datepicker-prev span{
+
+.ui-datepicker .ui-datepicker-prev span {
   text-align: left;
+  padding-left: 10px;
 }
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
-  text-indent:0!important;
-  color: $links_a!important;
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+  text-indent: 0 !important;
+  color: $links_a !important;
   height: 100%;
   width: 100%;
   left: 0;
@@ -705,38 +824,46 @@ header {
   margin-top: 0;
 
 }
+
 .ui-datepicker .ui-datepicker-title,
-.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
   line-height: 35px;
   font-size: 1em;
   font-weight: $fontRegular;
-  font-family: $fontFmainRegular!important;
+  font-family: $fontFmainRegular !important;
 }
-.ui-datepicker .ui-datepicker-header{
+
+.ui-datepicker .ui-datepicker-header {
   background-color: $white;
   border-color: transparent;
 }
+
 .ui-datepicker-prev:hover span,
-.ui-datepicker-next:hover span{
-  color: #3f67f7!important;
-  font-family: $fontFmainRegular!important;
+.ui-datepicker-next:hover span {
+  color: #3f67f7 !important;
+  font-family: $fontFmainRegular !important;
   font-weight: $fontRegular;
 
 }
-.ui-datepicker .ui-datepicker-next-hover{
+
+.ui-datepicker .ui-datepicker-next-hover {
   right: 2px;
 }
-.ui-datepicker .ui-datepicker-prev-hover{
+
+.ui-datepicker .ui-datepicker-prev-hover {
   left: 2px;
 }
-.ui-widget-header .ui-state-hover{
-  background-color: transparent!important;
+
+.ui-widget-header .ui-state-hover {
+  background-color: transparent !important;
   cursor: pointer;
 }
+
 .ui-datepicker-prev:hover,
-.ui-datepicker-next:hover{
-  border:transparent;
+.ui-datepicker-next:hover {
+  border: transparent;
 }
+
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
   position: absolute;
@@ -747,7 +874,6 @@ header {
 }
 
 // end callendsar restyling
-
 
 .loading-div {
   width: 100%;
@@ -778,26 +904,575 @@ header {
 }
 
 .bottom-paginator {
-  margin-top: 1em;
+
+  font-size: 13px;
+  margin-top: 2em;
   font-weight: $fontRegular;
   font-family: $fontFmainRegular;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding-left: $title-guest-name-pl;
+  padding-right: $title-guest-time-pr;
+  a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//.paginator {
+//  display: flex;
+//  flex-direction: row;
+//  align-items: stretch;
+//  li {
+//    width: 1.25em;
+//    text-align: center;
+//
+//    a.active {
+//      color: $black;
+//    }
+//
+//  }
+//}
+
+//todo Стили для index.html
+//tasks
+.sidebar {
+  padding: 2em;
 
 }
 
-.paginator {
+.sidebar .today-date {
+  font-family: $fontFmainRegular;
+  font-size: 18px;
+  font-weight: $fontRegular;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $black;
+}
+
+.sidebar .tasks_title {
+  font-family: $fontFSemiBold;
+  font-size: 18px;
+  font-weight: $fontSemiBold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $black;
+  margin-top: 2em;
+  margin-bottom: 1.75em;
+
+  a {
+    color: $links_a;
+  }
+}
+
+.tasks {
+  ul li {
+    min-width: 150px;
+    width: 100%;
+    min-height: 60px;
+    height: auto;
+    border-radius: 3px;
+    background-color: $sidebar-events-color-bg;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 0 30px 3px rgba(40, 66, 116, 0.08);
+
+    &.active {
+      background-color: $sidebar-events-color-bg-active;
+      color: $sidebar-events-text-active;
+      .text-info {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+  .task-title {
+    font-family: $fontFmainRegular;
+    font-size: 13px;
+    font-weight: $fontRegular;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $sidebar-events-text;
+
+  }
+  .task-info {
+    font-family: $fontFmainRegular;
+    font-size: 11px;
+    font-weight: $fontRegular;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: $text_mute2;
+    a.open {
+      color: $links_a;
+    }
+    a.close {
+      color: #b7cde8;
+      margin-left: 1em;
+    }
+  }
+}
+
+//todo возможно!! общие сьтили dashboard
+
+.dashboard .top {
+  background-color: transparent;
+  padding: 1em 2em;
+  .row {
+    display: flex;
+  }
+  .row.dashboard-containers {
+    //padding: 2em;
+    flex-grow: 0;
+    flex-wrap: wrap;
+
+    .col {
+      width: 110px;
+      flex-basis: 110px;
+    }
+  }
+  .row.dashboard-container {
+    align-items: center;
+    margin-top: 1em;
+  }
+  .info {
+    color: $black;
+  }
+  .info.big-text {
+
+    font-family: $fontFSemiBold;
+    font-size: $font_big_size;
+  }
+  .info.small-text {
+    font-family: $fontFmainRegular;
+    font-size: $font_small_size;
+    //margin-bottom: 1em;
+  }
+  .total_number {
+    font-size: $font_big_size;
+    color: $text_mute4;
+    &:before {
+      content: '/';
+    }
+  }
+
+  .graf {
+    margin-left: 5px;
+  }
+}
+
+// end of stling dashboard-top
+
+/////////
+//shedule section styling
+.hr { /*todo общий стиль для всех черт*/
+  width: 100%;
+  height: 1px;
+  opacity: 0.1;
+  border: solid 0.5px #979797;
+}
+
+.hr-col {
+  padding-left: $title-guest-process-pl;
+  padding-right: $title-guest-name-pr;
+}
+
+.hr-col.-two {
+  padding-left: $title-guest-process-pl;
+  padding-right: $title-guest-time-pr;
+}
+
+.btn-outline { //todo общий стиль для всех outline buttons
+  background-color: transparent;
+  border: solid 0.5px rgba(151, 151, 151, .22);;
+  color: $blue;
+  font-family: $fontFmainRegular;
+  font-weight: $fontRegular;
+  font-size: 12px;
+  &:hover, &:focus {
+    color: blue;
+    border-color: rgba(151, 151, 151, 1);
+  }
+}
+
+///////
+.not-dot {
+  position: absolute;
+  vertical-align: middle;
+  z-index: 16;
+  top: 20%;
+  .circle {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+  }
+  &.blue .circle {
+    background-color: $blue;
+  }
+  &.violet .circle {
+    background-color: #9012fe;
+  }
+
+  .dot-info {
+    display: inline-block;
+    font-size: 9px;
+    color: $black;
+    text-wrap: none;
+    margin-left: 1em;
+  }
+
+}
+
+.schedule {
+  padding: 1em 2em;
+}
+
+.schedule-nav {
+  margin-top: 1em;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  li {
-    width: 1.25em;
-    a.active {
-      color: $black;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: $black;
+  font-family: $fontFmainRegular;
+  font-weight: $fontRegular;
+  font-size: 12px;
+  p {
+    margin-right: 1em;
+    width: 125px;
+    flex-basis: 125px;
+  }
+  a.schedule-link {
+    width: auto;
+    flex-basis: auto;
+    margin-right: auto;
+    background-image: url(../img/underline.PNG);
+    background-repeat: repeat-x;
+    background-position: 0 1.1em;
+  }
+  .btn-full-schedule {
+    //margin-left: auto;
+    width: 125px;
+    flex-basis: 125px;
+  }
+}
+
+.schedule-container {
+  height: 320px;
+  padding-top: 1.0em;
+  padding-bottom: 1.0em;
+  overflow-x: auto;
+  .schedule-vue {
+    width: 100%;
+    min-width: 450px;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    //border: 1px solid black;
+    z-index: 10;
+  }
+}
+
+.time-line-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  //border: 1px solid blue;
+  z-index: 12;
+  .time-line .line {
+    width: 1.1px;
+    height: 155px;
+    opacity: 0.2;
+    border: solid 0.5px #979797;
+    margin: auto;
+  }
+  .time-line {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+  }
+  .time {
+    font-family: $fontFmainRegular;
+    font-size: 10px;
+    font-weight: $fontRegular;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+}
+
+.time-line-container.-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //border: 1px solid red;
+
+  z-index: 14;
+  .time-line.-hover {
+    margin-top: -120px;
+  }
+  .time-line.-hover .line {
+    width: 1.7px;
+    height: 180px;
+    opacity: 0.3;
+    border: solid 1.5px $blue;
+  }
+
+  .time {
+    color: $text_mute3;
+  }
+}
+
+.scheduled-task {
+  position: absolute;
+  z-index: 16;
+  min-height: 24px;
+  height: auto;
+  border-radius: 12px;
+  text-align: center;
+  padding: 6px;
+  top: 50px;
+  a {
+    font-size: 11px;
+    color: $black;
+    display: block;
+    width: 100%;
+  }
+  &.blue {
+    background-color: rgba(73, 144, 226, 0.2);;
+  }
+  &.yellow {
+    background-color: rgba(248, 232, 28, 0.2);;
+  }
+  $firstlevel: 32%;
+  &.first-level {
+    top: $firstlevel;
+  }
+  &.second-level {
+    top: calc(#{$firstlevel} + 25px + 18px);
+  }
+  &.third-level {
+    top: calc(#{$firstlevel} + 25px + 18px + 25px + 18px);
+  }
+
+  .tip {
+    position: absolute;
+    top: 40px;
+    right: 13%;
+    min-width: 215px;
+    min-height: 90px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.06);
+    z-index: 20;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -11px;
+      right: 16%;
+      width: 25px;
+      height: 25px;
+      transform: rotate(28deg) skewX(-32deg);
+      background: #fff;
+      z-index: 21;
+      box-shadow: -4px -4px 15px 2px rgba(0, 0, 0, 0.06);
+    }
+  }
+}
+
+.tip-container {
+  position: relative;
+  background-color: #fff;
+  z-index: 22;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  .title {
+    font-size: 11px;
+    text-align: left;
+    width: calc(100% - 30px);
+  }
+  .time {
+    text-align: left;
+    color: $text_mute4;
+  }
+  .title a {
+    color: $links_a;
+  }
+  .title a:hover {
+    color: blue;
+  }
+  .bottom-info {
+    text-align: left;
+    margin-top: 1.25em;
+  }
+  .bottom-info > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: left;
+    &.status {
+      color: $text_mute4;
+      margin-left: 2em;
+    }
+    &.participant {
+    }
+
+  }
+  .pick-color-group {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    display: inline-block;
+    svg {
+      width: 8px;
+      color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  .task-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 0.5px #d5c092;
+    padding: 0;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+
+.scheduled-task.blue .pick-color-group .task-color {
+  background-color: #4990e2;
+}
+
+.scheduled-task.yellow .pick-color-group .task-color {
+  background-color: #fefad2;
+}
+
+//notes
+.notes {
+  padding: 1em 2em;
+  font-size: 14px;
+  .title {
+    font-size: 14px;
+    margin-bottom: 1em;
+  }
+  .сustom-checkbox {
+    position: relative;
+    display: inline-block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    .custom-control-input {
+      position: absolute;
+      z-index: -1;
+      opacity: 1;
+      display: none; //other
+    }
+
+  }
+  .custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 13px;
+    span {
+      color: $text_mute4;
+      margin-right: 1em;
+    }
+
+    &:after {
+      position: absolute;
+      top: 1px;
+      left: -22px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+}
+
+.custom-control-label:before {
+  transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  position: absolute;
+  top: 3px;
+  left: -25px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+  content: "";
+  user-select: none;
+  background-color: rgba(155, 155, 155, .2);
+}
+
+input[type="checkbox"]:checked + label.custom-control-label:before {
+  background-color: rgba(126, 211, 33, .1);;
+}
+
+input[type="checkbox"]:checked + .custom-control-label:after {
+  background-image: url("../img/check.PNG");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+input[type="checkbox"]:checked + .custom-control-label {
+  color: $text_mute3;
+}
+
+.notification-group {
+  position: relative;
+  margin-bottom: 0.7em;
+  .not-dot {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    margin-left: 0.5em;
+    &.blue {
+      background-color: $blue;
+    }
+    &.violet {
+      background-color: #9012fe;
     }
 
   }
 }
 
-
+.notification-group.checked .not-dot {
+  background-color: transparent;
+}

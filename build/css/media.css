@@ -18,8 +18,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-  .with_callendar {
-    font-size: 1.25em; }
+  .tasks ul li {
+    width: 100%; }
   .with_callendar,
   .link_full_history {
     position: relative !important; }
@@ -35,7 +35,37 @@
     z-index: 90 !important;
     border-radius: 0;
     border: transparent;
-    margin: 0px; } }
+    margin: 0px; }
+  .hr-col {
+    padding-left: 2.25rem;
+    padding-right: 2.75rem; }
+  .hr-col.-two {
+    padding-left: 2.25rem;
+    padding-right: 1.15rem; }
+  .top-callendar-row {
+    padding-left: 2.25rem;
+    padding-right: 1.15rem; }
+  .table-title .name,
+  .main-table .name {
+    position: relative;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem; }
+  .table-title .process,
+  .main-table .process {
+    padding-left: 2.25rem;
+    padding-right: 1.15rem; }
+  .table-title .time,
+  .main-table .time {
+    padding-left: 1.15rem;
+    padding-right: 1.15rem; }
+  .main-table .avatar-guest {
+    right: -17.5px; }
+  .main-table .item .hr {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(66.66% - 1.15rem - 2.25rem);
+    margin: 0 1.15rem; } }
 
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
@@ -59,4 +89,8 @@
 
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
-  /* CSS для: ширины >= 1200px */ }
+  /* CSS для: ширины >= 1200px */
+  .st-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px; } }
