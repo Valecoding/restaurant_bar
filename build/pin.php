@@ -9,7 +9,7 @@
         <div class="form-block"><div class="title">Введите пин</div>
         <div class="form-group">
             <form method="post" id="login">
-                <input type="password" class="input password pin" placeholder="Пароль"><br>
+                <input type="password" class="input password pin" placeholder="****" required minlength="4" maxlength="4"><br>
             </form>
             <ul class="underline-link">
                 <li>или</li>

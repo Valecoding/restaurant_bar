@@ -39,21 +39,22 @@ $fontlight: 300;
 
 $nav-mobile-top: 64px;
 
-$nav-panel-width: 280px;
+$nav-panel-width: 280px;//for mobile
+$nav-panel-width-desktop: 320px;//for desktop
 
-$av-guest-width: 35px; //avatar of guest width/height
-$av-width: 35px; //avatar of the user width/height
+$av-guest-width: 35px; //avatar of guest width/height<1200
+$av-width: 36px; //avatar of the user width/height
 
-$font_section_title: 1.125rem;
+$font_section_title: 1.25rem;
 
-$border-radius: 3px;
+$border-radius: 4px;
 
 //к страницам с рабочим столом (для индекса.штмл отличается чем столі и заказы  todo проверить)
 
 $av_waiters_bg: #f3f3f3; //todo not used on this page
 $avatar_waiters_size: 35px; //todo not used on this page
-$font_small_size: 14px;
-$font_big_size: 18px;
+$font_small_size: 18px;
+$font_big_size: 24px;
 $avatar_waiters_status: 8px; //todo not used on this page
 $avatar_waiters_status_online: #73d600; //todo not used on this page
 $avatar_waiters_status_offline: red; //todo not used on this page
@@ -77,55 +78,68 @@ $title-guest-time-pr: 2rem; //отступ слева й колонка
 .col {
   flex-grow: 1;
   flex-shrink: 1;
+  width: 100%;//ie10
   flex-basis: 100%;
 }
 
 .col-1 {
   flex-basis: 8.33%;
+  width: 8.33%;//ie10
 }
 
 .col-2 {
   flex-basis: 16.66%;
+  width: 16.66%;//ie10
 }
 
 .col-3 {
   flex-basis: 25%;
+  width: 25%;//ie10
 }
 
 .col-4 {
   flex-basis: 33.33%;
+  width: 33.33%;//ie10
 }
 
 .col-5 {
   flex-basis: 41.66%;
+  width: 41.66%;//ie10
 }
 
 .col-6 {
   flex-basis: 50%;
+  width: 50%;//ie10
 }
 
 .col-7 {
   flex-basis: 58.33%;
+  width: 58.33%;//ie10
 }
 
 .col-8 {
   flex-basis: 66.66%;
+  width: 66.66%;//ie10
 }
 
 .col-9 {
   flex-basis: 75%;
+  width: 75%;//ie10
 }
 
 .col-10 {
   flex-basis: 83.33%;
+  width: 83.33%;//ie10
 }
 
 .col-11 {
   flex-basis: 91.66%;
+  width: 91.66%;//ie10
 }
 
 .col-12 {
   flex-basis: 100%;
+  width: 100%;//ie10
 }
 
 .row {
@@ -164,6 +178,10 @@ body, html {
 
 .d-mobil-block {
   display: block;
+}
+
+.d-xl-block {
+  display: none;
 }
 
 .container {
@@ -317,6 +335,7 @@ header {
       color: $black;
       float: left;
       width: calc(100% - #{$av-width});
+      font-size: 1.25rem;
 
       span {
         float: right;
@@ -337,7 +356,8 @@ header {
     svg {
       color: $text_mute;
       padding-top: 1px;
-      width: 8px;
+      width: 10px;
+      height: 15px;
     }
   }
 }
@@ -350,6 +370,7 @@ header {
 }
 
 .st-menu ul li a {
+  font-size: 1.125rem;
   font-family: $fontFmainRegular;
   color: $nav_a;
   text-transform: inherit;
@@ -421,6 +442,7 @@ header {
   margin-top: 30px;
   position: relative;
   width: 100%;
+  margin-bottom: 1.5em;
 
   background-color: $white;
   display: flex;
@@ -444,7 +466,7 @@ header {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   }
   .input-group-append {
-    margin-left: -1px;
+    margin-left: -40px;
     display: flex;
     .btn-nav-search {
       width: 40px;
@@ -587,8 +609,11 @@ header {
 .main-table .time {
   padding-left: $title-guest-time-pl;
   padding-right: $title-guest-time-pr;
+  text-align: right;
 }
-
+.table-title .time{
+  font-size: 14px;
+}
 .main-table {
 
   .item {
@@ -606,6 +631,7 @@ header {
 
     }
   }
+
   .item:first-child .hr{
     display: none;
   }
@@ -624,8 +650,12 @@ header {
     background-color: $greydark;
   }
   .name-guest {
+    font-size: 1.125rem;
     font-weight: $fontRegular;
     font-family: $fontFmainRegular;
+  }
+  .email-guest{
+    font-size: 0.875rem;
   }
   .email-guest a {
     color: $text_mute;
@@ -637,10 +667,12 @@ header {
 
   }
   .time {
+    font-size: 14px;
+    font-size: 0.875rem;
     margin: 0 auto;
     text-align: right;
   }
-  .process, .time {
+  /*.process, .time {
     ul {
       padding-top: 0.5em;
     }
@@ -649,14 +681,44 @@ header {
     }
     ul li {
       margin-top: 2em;
-    }
+    }*/
+  .process, .time {
+      padding-top: 0.5em;
 
+  }
+  .item.-info-block .main-item .process .li{
+    transition: all 0.3s ease-out;
+    font-size: 20px;
+  }
+  .item .sub-item.-info{
+    transition:all 0.3s ease-out;
+    display: none;
+    opacity: 0;
+
+  }
+  .item .sub-item.-info.active{
+    display: block!important;
+    opacity: 1;
+
+  }
+  .sub-item.-info{
+    .li.-action-links{
+      margin-top: 30px;
+    }
+    .action{
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .action.-second{
+      margin-left: 1em;
+    }
   }
 }
 
 .table-title {
   .name, .process, .time {
     color: $text_mute;
+    font-size: 14px;
   }
   margin-bottom: 1em;
 }
@@ -672,11 +734,14 @@ header {
   //justify-content: space-between;
 }
 
-.with_callendar,
+.title-section, .title-section.with_callendar,
 .link_full_history {
-  font-size: $font_section_title;
+  font-size: 18px;
   margin-bottom: 0.75em;
   //position: relative;
+}
+.link_full_history{
+  font-size: 16px;
 }
 
 .with_callendar {
@@ -694,8 +759,10 @@ header {
     color: $text_mute;
   }
   svg {
+    opacity: 0.3;
     position: relative;
     width: 7px;
+    height: 11px;
   }
   .ui-datepicker-trigger {
     background-color: transparent;
@@ -905,8 +972,10 @@ header {
 
 .bottom-paginator {
 
-  font-size: 13px;
-  margin-top: 2em;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 3.5em;
+  padding-bottom: 2em;
   font-weight: $fontRegular;
   font-family: $fontFmainRegular;
   display: flex;
@@ -914,7 +983,7 @@ header {
   flex-direction: row;
   padding-left: $title-guest-name-pl;
   padding-right: $title-guest-time-pr;
-  a {
+  a.load-more {
     margin-left: auto;
     margin-right: auto;
   }
@@ -994,7 +1063,7 @@ header {
   }
   .task-title {
     font-family: $fontFmainRegular;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: $fontRegular;
     font-style: normal;
     font-stretch: normal;
@@ -1006,7 +1075,7 @@ header {
   }
   .task-info {
     font-family: $fontFmainRegular;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: $fontRegular;
     font-style: normal;
     font-stretch: normal;
@@ -1023,6 +1092,13 @@ header {
     }
   }
 }
+.tasks ul>li.active .task-title{
+  color: $sidebar-events-text-active;
+}
+.tasks ul>li.active .task-info{
+  color: rgba(255,255,255,0.4);
+}
+
 
 //todo возможно!! общие сьтили dashboard
 
@@ -1099,7 +1175,7 @@ header {
   color: $blue;
   font-family: $fontFmainRegular;
   font-weight: $fontRegular;
-  font-size: 12px;
+  font-size: 1rem;
   &:hover, &:focus {
     color: blue;
     border-color: rgba(151, 151, 151, 1);
@@ -1152,11 +1228,11 @@ header {
   color: $black;
   font-family: $fontFmainRegular;
   font-weight: $fontRegular;
-  font-size: 12px;
+  font-size: 16px;
   p {
     margin-right: 1em;
-    width: 125px;
-    flex-basis: 125px;
+    width: auto;
+    flex-basis: auto;
   }
   a.schedule-link {
     width: auto;
@@ -1168,8 +1244,8 @@ header {
   }
   .btn-full-schedule {
     //margin-left: auto;
-    width: 125px;
-    flex-basis: 125px;
+    width: auto;
+    flex-basis: auto;
   }
 }
 
@@ -1374,11 +1450,13 @@ header {
 }
 
 //notes
+
+
 .notes {
   padding: 1em 2em;
-  font-size: 14px;
+  font-size: 16px;
   .title {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 1em;
   }
   .сustom-checkbox {
@@ -1398,7 +1476,7 @@ header {
     position: relative;
     margin-bottom: 0;
     display: inline-block;
-    font-size: 13px;
+    font-size: inherit;
     span {
       color: $text_mute4;
       margin-right: 1em;
@@ -1417,6 +1495,10 @@ header {
       background-size: 50% 50%;
     }
   }
+}
+.checkboxes-container,
+.btn-add-notification{
+  margin-left: 1rem;
 }
 
 .custom-control-label:before {
@@ -1448,6 +1530,9 @@ input[type="checkbox"]:checked + .custom-control-label:after {
 input[type="checkbox"]:checked + .custom-control-label {
   color: $text_mute3;
 }
+input[type="checkbox"]:checked + .custom-control-label + .not-dot {
+  background-color: transparent;
+}
 
 .notification-group {
   position: relative;
@@ -1469,10 +1554,10 @@ input[type="checkbox"]:checked + .custom-control-label {
     &.violet {
       background-color: #9012fe;
     }
+    &.black {
+      background-color: #000;
+    }
 
   }
 }
 
-.notification-group.checked .not-dot {
-  background-color: transparent;
-}

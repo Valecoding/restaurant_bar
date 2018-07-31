@@ -1,0 +1,175 @@
+//colors main
+$white: #fff;
+$black: #000;
+$blue: #4990e2; //rgba(73, 144, 226, 1)
+$bluesky: rgba(73, 144, 226, .1);
+$green: #7ed224;
+$greylight1: #fbfbfb; //loading... bg
+$greylight2: #e1e1e1; //search
+$greydark: #d8d8d8; //avatar_bg
+
+$nav_active_a: #2e546b;
+$nav_a: rgba(46, 84, 107, 0.4);
+$links_a: $blue;
+$nav_bg: #f5f5f5;
+$sidebar_bg: rgba(245, 245, 245, 0.5);
+$greylight_hr: #e2e2e2;
+
+$text_mute: rgba(0, 0, 0, 0.5); //тот что темнее
+$text_mute2: rgba(0, 0, 0, 0.58); // светлее
+$text_mute3: rgba(0, 0, 0, 0.3); // самое светлое
+$text_mute4: rgba(0, 0, 0, 0.2); // самое самое светлое
+
+$logo_color: #d9e0e8;
+
+$nav-events-color-text: $blue;
+$nav-events-color-bg: $bluesky;
+$sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg-active: $blue;
+$sidebar-events-color-bg: $white;
+$sidebar-events-text: $black;
+$sidebar-events-text-active: $white;
+
+$fontFmainRegular: 'Source Sans Pro', "Arial Narrow", sans-serif;
+$fontFSemiBold: 'Source Sans Pro', Arial, sans-serif;
+$fontRegular: 400;
+$fontSemiBold: 600;
+$fontBold: 700;
+$fontlight: 300;
+
+$nav-mobile-top: 64px;
+
+$nav-panel-width: 280px;//for mobile
+$nav-panel-width-desktop: 320px;//for desktop
+
+$av-guest-width: 35px; //avatar of guest width/height<1200
+$av-width: 36px; //avatar of the user width/height
+
+
+$font_section_title: 1.25rem;
+
+$border-radius: 4px;
+
+//к истории активности посетителей для мобильной версии
+$title-guest-name-pl: 2rem; //отступ слева й колонка
+$title-guest-name-pr: $title-guest-name-pl; //отступ слева й колонка
+$title-guest-process-pl: 2rem; //отступ слева й колонка
+$title-guest-process-pr: 2rem; //отступ слева й колонка
+$title-guest-time-pl: 2rem; //отступ слева й колонка
+$title-guest-time-pr: 2rem; //отступ слева й колонка
+
+
+.table-history-activity{
+  padding-top: 1.5rem;
+}
+
+.main-table .item:first-child .hr{
+  display: block;
+}
+
+.bottom-paginator {
+  a.load-more {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .paginator li{
+    width: 1.5em;
+    display: inline-block;
+    a{
+      display: block;
+      text-align: center;
+    }
+  }
+}
+.table-title{
+  align-items: center;
+  margin-bottom: 2em;
+}
+.title-section.with_callendar{
+  margin-bottom: 0;
+  padding-left:$title-guest-name-pl;
+  padding-right: $title-guest-name-pr;
+}
+.table-title .link_filter{
+  font-family: $fontFmainRegular;
+  font-size: 14px;
+  font-weight: $fontRegular;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $blue;
+
+  padding-right: $title-guest-process-pr;
+  padding-left: $title-guest-process-pl;
+  svg{
+    width: 7px;
+    opacity: 0.4;
+
+  }
+}
+$av-guest-width: 40px; //avatar of guest width/height>1200
+
+//к истории активности посетителей !!!!!!!!только медиазапросах для десктопной версии !!!!!!
+$title-guest-name-pl: 2.75rem;//отступ слева й колонка
+$title-guest-name-pr: $title-guest-name-pl;//отступ слева й колонка
+$title-guest-process-pl: 2.25rem;//отступ слева й колонка
+$title-guest-process-pr: 1.15rem;//отступ слева й колонка
+$title-guest-time-pl: 1.15rem;//отступ слева й колонка
+$title-guest-time-pr: 1.15rem;//отступ слева й колонка
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* xs - устройства (до 576px) */
+/* CSS для ширины, которая меньше 575px (включительно) */
+
+/* sm-устройства (больше или равно 576px) */
+/*@media (min-width: 576px) {
+  !* CSS для: 576px <= ширины <= 767px *!
+
+}*/
+
+/* xs - устройства (до 600px) */
+/* CSS для ширины, которая меньше 599px (включительно) */
+
+/* sm-устройства (больше или равно 600px) */
+@media (min-width: 600px) {
+  /* CSS для: 600px <= ширины <= 767px */
+
+  .title-section.with_callendar{
+    padding-left:$title-guest-name-pl;
+    padding-right: 0.75rem;
+  }
+  .table-title .link_filter{
+    padding-right: $title-guest-process-pr;
+    padding-left: $title-guest-process-pl;
+  }
+}
+
+/* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+  /* CSS для: 768px <= ширины <= 991px */
+
+}
+
+/* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+  /* CSS для: 992px <= ширины <= 1119px */
+  .table-history-activity{
+    padding-top: 3.5rem;
+  }
+
+}
+
+/* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+  /* CSS для: ширины >= 1200px */
+
+}
+
+//@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+//  /* IE10+ CSS styles go here */
+//}
+
+

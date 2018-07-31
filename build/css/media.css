@@ -20,7 +20,7 @@
     display: flex; }
   .tasks ul li {
     width: 100%; }
-  .with_callendar,
+  .title-section, .title-section.with_callendar,
   .link_full_history {
     position: relative !important; }
   #ui-datepicker-div {
@@ -37,13 +37,13 @@
     border: transparent;
     margin: 0px; }
   .hr-col {
-    padding-left: 2.25rem;
+    padding-left: 2.75rem;
     padding-right: 2.75rem; }
   .hr-col.-two {
-    padding-left: 2.25rem;
+    padding-left: 2.75rem;
     padding-right: 1.15rem; }
   .top-callendar-row {
-    padding-left: 2.25rem;
+    padding-left: 2.75rem;
     padding-right: 1.15rem; }
   .table-title .name,
   .main-table .name {
@@ -52,20 +52,29 @@
     padding-right: 2.75rem; }
   .table-title .process,
   .main-table .process {
-    padding-left: 2.25rem;
+    padding-left: 2.75rem;
     padding-right: 1.15rem; }
   .table-title .time,
   .main-table .time {
     padding-left: 1.15rem;
     padding-right: 1.15rem; }
   .main-table .avatar-guest {
-    right: -17.5px; }
+    right: -20px; }
   .main-table .item .hr {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(66.66% - 1.15rem - 2.25rem);
-    margin: 0 1.15rem; } }
+    width: calc(66.66% - 1.15rem - 2.75rem);
+    margin: 0 1.15rem; }
+  .main-table .item .sub-item.-info.active {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    opacity: 1; }
+  .bottom-paginator {
+    font-size: 1.25rem;
+    padding-left: 2.75rem;
+    padding-right: 1.15rem; } }
 
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
@@ -82,9 +91,10 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0%, 0, 0); }
   .st-menu {
-    visibility: visible; }
+    visibility: visible;
+    width: 320px; }
   .st-content {
-    width: calc(100% - 280px);
+    width: calc(100% - 320px);
     float: right; } }
 
 /* xl-устройства (больше или равно 1200px) */
@@ -93,4 +103,17 @@
   .st-container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px; } }
+    max-width: 1440px; }
+  .title-section, .title-section.with_callendar {
+    font-size: 1.5rem; }
+  .title-section .link_full_history {
+    font-size: 18px; }
+  .main-table .avatar-guest {
+    width: 40px;
+    height: 40px; }
+  .d-xl-block {
+    display: block; }
+  .sidebar .today-date {
+    font-size: 1.5rem; }
+  .sidebar .tasks_title {
+    font-size: 1.5rem; } }

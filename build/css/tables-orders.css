@@ -128,13 +128,15 @@
   overflow-x: auto;
   overflow-y: hidden; }
 
-.history_orders .bottom-paginator .link {
-  text-align: center;
-  margin: auto; }
-
-.history_orders .paginator {
-  display: none; }
-
+/*.history_orders{
+  .bottom-paginator .link{
+    text-align: center;
+    margin: auto;
+  }
+  .paginator ul li{
+    display: inline-block;
+  }
+}*/
 /*==========  Mobile First Method  ==========*/
 /* xs - устройства (до 576px) */
 /* CSS для ширины, которая меньше 575px (включительно) */

@@ -19,7 +19,7 @@
         <div class="form-group">
             <form method="post" id="login">
                 <input type="email" class="input email" placeholder="Почта" value="manager-maria@asht"><br>
-                <input type="password" class="input password" placeholder="Пароль"><br>
+                <input type="password" class="input password" placeholder="Пароль" required><br>
                 <button type="submit" class="btn btn-submit btn-color-blue">Войти в кабинет</button>
             </form>
         </div></div>

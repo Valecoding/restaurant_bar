@@ -190,6 +190,15 @@ body,.wrapper{
       .input:-ms-input-placeholder { font-size: 14px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; }
       .input::placeholder { font-size: 14px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; }
 
+
+    .input.pin::-moz-placeholder {
+      font-size: 50px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; text-shadow:none; position: relative; top:10px;
+      line-height: 1.2;
+      /* Цвет подсказывающего текста */}
+      .input.pin::-webkit-input-placeholder { font-size: 50px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; text-shadow:none; position: relative; top:16px; line-height: 1.2;}
+      .input.pin:-ms-input-placeholder { font-size: 50px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; text-shadow:none; position: relative; top:16px; line-height: 1.2;}
+      .input.pin::placeholder { font-size: 50px; color: $text_mute4; font-family: $fontFmainRegular; font-weight: $fontRegular; text-shadow:none; position: relative; top:16px; line-height: 1.2;}
+
     .btn {
       display: block;
       border-radius: 5px;
@@ -286,87 +295,104 @@ body,.wrapper{
     margin-bottom: 0.25em;
   }
 }
-.main-block.pinlogin .input.pin{
-  background-color: transparent;
+.main-block .input.pin {
+  text-align: center;
+  font-size: 40px;
+  vertical-align: middle;
+  padding-bottom: 6px;
+  letter-spacing: 22px;
+  padding-left: 21px;
+  padding-right: 0;
+  color: transparent;
+  text-shadow: 0 0 0 black;
 }
+  .main-block.pinlogin .input.pin{
+    background-color: transparent;
 
-
-/*==========  Mobile First Method  ==========*/
-
-/* xs - устройства (до 576px) */
-/* CSS для ширины, которая меньше 575px (включительно) */
-
-/* sm-устройства (больше или равно 576px) */
-@media (min-width: 576px) {
-  /* CSS для: 576px <= ширины <= 767px */
-  .wrapper .logo {
-    display: block;
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
   }
-  .d-mobil-none {
-    display: block;
-  }
-}
-
-/* xs - устройства (до 600px) */
-/* CSS для ширины, которая меньше 599px (включительно) */
-
-/* sm-устройства (больше или равно 600px) */
-/*@media (min-width: 600px) {
-  !* CSS для: 600px <= ширины <= 767px *!
-
-}*/
-
-/* md-устройства (больше или равно 768px) */
-@media (min-width: 768px) {
-  /* CSS для: 768px <= ширины <= 991px */
-  .main-tip{
-    display: inline-block;
-    width: 50%;
-    float: left;
-    text-align: left;
-  }
-  .main-block {
-    width: 636px;
-    left: 50%;
-    transform: translate(-50%, -50%)
+  .main-block.newpin .input.pin{
+    margin-bottom: 1rem;
   }
 
-  .main-tip .title-tip {
-    margin-bottom: 21px;
-    margin-top: 5em;
-    //width: 50%;
+
+
+
+  /*==========  Mobile First Method  ==========*/
+
+  /* xs - устройства (до 576px) */
+  /* CSS для ширины, которая меньше 575px (включительно) */
+
+  /* sm-устройства (больше или равно 576px) */
+  @media (min-width: 576px) {
+    /* CSS для: 576px <= ширины <= 767px */
+    .wrapper .logo {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
+    .d-mobil-none {
+      display: block;
+    }
   }
-  .main-block.-two-el .form-block{
-    display: inline-block;
-    width: 50%;
+
+  /* xs - устройства (до 600px) */
+  /* CSS для ширины, которая меньше 599px (включительно) */
+
+  /* sm-устройства (больше или равно 600px) */
+  /*@media (min-width: 600px) {
+    !* CSS для: 600px <= ширины <= 767px *!
+
+  }*/
+
+  /* md-устройства (больше или равно 768px) */
+  @media (min-width: 768px) {
+    /* CSS для: 768px <= ширины <= 991px */
+    .main-tip{
+      display: inline-block;
+      width: 50%;
+      float: left;
+      text-align: left;
+    }
+    .main-block {
+      width: 636px;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+
+    .main-tip .title-tip {
+      margin-bottom: 21px;
+      margin-top: 5em;
+      //width: 50%;
+    }
+    .main-block.-two-el .form-block{
+      display: inline-block;
+      width: 50%;
+    }
+    .main-block.-one-el .form-group{
+      display: block;
+      width: 50%;
+    }
+
+    .main-tip .text-tip {
+      line-height: 1.4;
+      width: 230px;
+      margin-left: 0;
+    }
+
   }
-  .main-block.-one-el .form-group{
-    display: block;
-    width: 50%;
+
+  /* lg-устройства (больше или равно 992px) */
+  @media (min-width: 992px) {
+    /* CSS для: 992px <= ширины <= 1119px */
+
   }
 
-  .main-tip .text-tip {
-    line-height: 1.4;
-    width: 230px;
-    margin-left: 0;
+  /* xl-устройства (больше или равно 1200px) */
+  @media (min-width: 1200px) {
+    /* CSS для: ширины >= 1200px */
+
   }
-
-}
-
-/* lg-устройства (больше или равно 992px) */
-@media (min-width: 992px) {
-  /* CSS для: 992px <= ширины <= 1119px */
-
-}
-
-/* xl-устройства (больше или равно 1200px) */
-@media (min-width: 1200px) {
-  /* CSS для: ширины >= 1200px */
-
-}
 
 //@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 //  /* IE10+ CSS styles go here */

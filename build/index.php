@@ -216,27 +216,30 @@
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">
                                             <span class="time">14:00</span>Встретить спикеров лекции</label>
+                                        <div class="not-dot blue"></div>
                                     </div>
-                                    <div class="not-dot blue"></div>
+
                                 </div>
                                 <div class="notification-group">
                                     <div class="сustom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck2">
                                         <label class="custom-control-label" for="customCheck2">
                                             <span class="time">23:30</span>Учет табака</label>
+                                        <div class="not-dot violet"></div>
                                     </div>
-                                    <div class="not-dot violet"></div>
+
                                 </div>
-                                <div class="notification-group checked">
+                                <div class="notification-group ">
                                     <div class="сustom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
                                         <label class="custom-control-label" for="customCheck3">
                                             <span class="time">11:00</span>Выдать почту Максиму</label>
+                                        <div class="not-dot black"></div>
                                     </div>
-                                    <div class="not-dot transparent"></div>
+
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-outline">Добавить…</button>
+                            <button type="button" class="btn btn-outline btn-add-notification">Добавить…</button>
                         </div>
                     </div>
                 </div>
@@ -252,7 +255,7 @@
             <div class="col-4 width-sidebar"></div>
             <div class="col-8">
                 <div class="row top-callendar-row">
-                    <div class="with_callendar title-section">Активность заказов за <!--<form method="post">--><label
+                    <div class="with_callendar title-section">Активность за <!--<form method="post">--><label
                                 class="callendar-dropdown d-none">сегодня<i>
                                 <svg aria-hidden="true" data-prefix="fas"
                                      data-icon="chevron-down"
@@ -286,136 +289,173 @@
                 </div>
             </div>
             <div class="main-table"> <!--main-table wrapper-->
-                <div class="row item">
-                    <hr class="hr ">
-                    <div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">Суарез</span><br>
-                        <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                <div class="item ">
+                    <div class="row main-item">
+                        <hr class="hr ">
+                        <div class="col-4 width-sidebar name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Евгений Формин</span><br>
+                            <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
+                        </div>
+                        <div class="col-5 process">
+                            <div class="li">Приглашен пользователем Майк Ковальски</div>
+                        </div>
+                        <div class="col-3 time">
+                            <div class="li">16:30</div>
+                        </div>
                     </div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Забронировал стол №17 на 21:00</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>2 минуты назад</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row sub-item">
-                    <div class="col-4 width-sidebar name"></div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Оплата абонемента</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>27 минут назад</li>
-                        </ul>
+                    <div class="row sub-item -info">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-8 process ">
+                            <div class="li">John и еще трое приглашенных гостей прибудут в переговорку к 23:00</div>
+                            <div class="li -action-links ">
+                                <a class="action -first" href="#">Создать напоминание</a><a class="action -second" href="#">Открыть
+                                    чек заказа</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row item">
-                    <hr class="hr ">
-                    <div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">Мила</span><br>
-                        <span class="email-guest"><a href="mailto:mila@gmail.com">mila@gmail.com</a></span>
+                <div class="item ">
+                    <div class="row main-item">
+                        <hr class="hr ">
+                        <div class="col-4 width-sidebar name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">John</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="col-5 process">
+                            <div class="li">Сел за столом №28</div>
+                        </div>
+                        <div class="col-3 time">
+                            <div class="li">15:32</div>
+                        </div>
                     </div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Получил заказ</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>27 минут назад</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row item">
-                    <hr class="hr ">
-                    <div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">Croissant</span><br>
-                        <span class="email-guest"><a href="mailto:cro@mail.ru">cro@mail.ru</a></span>
-                    </div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Вышел из заведения и оплатил заказ</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>16:30</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row item">
-                    <hr class="hr ">
-                    <!--<div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">Евгений Формин</span><br>
-                        <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
-                    </div>
-                    <div class="col-5 process">
-                        <ul><li>Приглашен пользователем Майк Ковальски</li>
-                            <li>Забронировал стол №17 на 21:00</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul><li>16:25</li>
-                            <li>16:25</li>
-                        </ul>
-                    </div>-->
-                    <div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">Евгений Формин</span><br>
-                        <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
-                    </div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Приглашен пользователем Майк Ковальски</li>
-                        </ul>
-                    </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>16:25</li>
-                        </ul>
-                    </div>
+                    <div class="row sub-item">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-5 process">
 
+                            <div class="li">Забронировал стол №17 на 21:00</div>
+
+                        </div>
+                        <div class="col-3 time">
+
+                            <div class="li">14:30</div>
+
+                        </div>
+                    </div>
+                    <div class="row sub-item -info ">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-8 process ">
+                            <div class="li">John и еще трое приглашенных гостей прибудут в переговорку к 23:00</div>
+                            <div class="li -action-links ">
+                                <a class="action -first" href="#">Создать напоминание</a><a class="action -second" href="#">Открыть
+                                    чек заказа</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row sub-item">
-                    <div class="col-4 width-sidebar name"></div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Забронировал стол №17 на 21:00</li>
-                        </ul>
+                <div class="item -info-block">
+                    <div class="row main-item">
+                        <hr class="hr ">
+                        <div class="col-4 width-sidebar name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Евгений Формин</span><br>
+                            <span class="email-guest"><a href="mailto:eug-f@gmail.com">eug-f@gmail.com</a></span>
+                        </div>
+                        <div class="col-5 process">
+                            <div class="li">Приглашен пользователем Майк Ковальски</div>
+                        </div>
+                        <div class="col-3 time">
+                            <div class="li">16:25</div>
+                        </div>
                     </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>16:25</li>
-                        </ul>
+                    <div class="row sub-item">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-5 process">
+
+                            <div class="li">Забронировал стол №17 на 21:00</div>
+
+                        </div>
+                        <div class="col-3 time">
+
+                            <div class="li">16:25</div>
+
+                        </div>
+                    </div>
+                    <div class="row sub-item -info active">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-8 process ">
+                            <div class="li">John и еще трое приглашенных гостей прибудут в переговорку к 23:00</div>
+                            <div class="li -action-links ">
+                                <a class="action -first" href="#">Создать напоминание</a><a class="action -second" href="#">Открыть
+                                    чек заказа</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row item">
-                    <hr class="hr ">
-                    <div class="col-4 width-sidebar name">
-                        <span class="avatar-guest"></span>
-                        <span class="name-guest">John</span><br>
-                        <span class="email-guest"><a href="mailto:john@gmail.com">john@gmail.com</a></span>
+                <div class="item ">
+                    <div class="row main-item">
+                        <hr class="hr ">
+                        <div class="col-4 width-sidebar name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Суарез Мигос</span><br>
+                            <span class="email-guest"><a href="mailto:suarez@gmail.com">suarez@gmail.com</a></span>
+                        </div>
+                        <div class="col-5 process">
+                            <div class="li">Забронировал стол №17 на 21:00</div>
+                        </div>
+                        <div class="col-3 time">
+                            <div class="li">2 минуты назад</div>
+                        </div>
                     </div>
-                    <div class="col-5 process">
-                        <ul>
-                            <li>Сел за столом №28</li>
-                        </ul>
+                    <div class="row sub-item">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-5 process">
+
+                            <div class="li">Оплата абонемента</div>
+
+                        </div>
+                        <div class="col-3 time">
+
+                            <div class="li">27 минут назад</div>
+
+                        </div>
                     </div>
-                    <div class="col-3 time">
-                        <ul>
-                            <li>15:32</li>
-                        </ul>
+                    <div class="row sub-item -info ">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-8 process ">
+                            <div class="li">John и еще трое приглашенных гостей прибудут в переговорку к 23:00</div>
+                            <div class="li -action-links ">
+                                <a class="action -first" href="#">Создать напоминание</a><a class="action -second" href="#">Открыть
+                                    чек заказа</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item ">
+                    <div class="row main-item">
+                        <hr class="hr ">
+                        <div class="col-4 width-sidebar name">
+                            <span class="avatar-guest"></span>
+                            <span class="name-guest">Croissant</span><br>
+                            <span class="email-guest"><a href="mailto:cro@mail.ru">cro@mail.ru</a></span>
+                        </div>
+                        <div class="col-5 process">
+                            <div class="li">Вышел из заведения и оплатил заказ</div>
+                        </div>
+                        <div class="col-3 time">
+                            <div class="li">16:30</div>
+                        </div>
+                    </div>
+                    <div class="row sub-item -info ">
+                        <div class="col-4 width-sidebar "></div>
+                        <div class="col-8 process ">
+                            <div class="li">John и еще трое приглашенных гостей прибудут в переговорку к 23:00</div>
+                            <div class="li -action-links ">
+                                <a class="action -first" href="#">Создать напоминание</a><a class="action -second" href="#">Открыть
+                                    чек заказа</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="loading-div d-none"><!--loading div-->
@@ -425,7 +465,7 @@
         </div> <!--/table-history-->
 
         <div class="row bottom-paginator">
-            <a href="#">Загрузить еще</a>
+            <a class="load-more" href="#">Загрузить еще</a>
             <ul class="paginator d-none">
                 <li><a class="active" href="#">1</a></li>
                 <li><a href="#">2</a></li>

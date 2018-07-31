@@ -40,14 +40,15 @@ $fontlight: 300;
 
 $nav-mobile-top: 64px;
 
-$nav-panel-width: 280px;
+$nav-panel-width: 280px;//for mobile
+$nav-panel-width-desktop: 320px;//for desktop
 
-$av-guest-width: 35px; //avatar of guest width/height
-$av-width: 35px; //avatar of the user width/height
+$av-guest-width: 40px; //avatar of guest width/height>1200
+$av-width: 36px; //avatar of the user width/height
 
-$font_section_title: 1.125rem;
+$font_section_title: 1.5rem; //>1200px
 
-$border-radius: 3px;
+$border-radius: 4px;
 
 //к страницам с рабочим столом (для индекса.штмл отличается чем столі и заказы  todo проверить)
 
@@ -62,7 +63,7 @@ $avatar_waiters_status_offline: red; //todo not used on this page
 //к истории активности посетителей !!!!!!!!только медиазапросах для десктопной версии !!!!!!
 $title-guest-name-pl: 2.75rem;//отступ слева й колонка
 $title-guest-name-pr: $title-guest-name-pl;//отступ слева й колонка
-$title-guest-process-pl: 2.25rem;//отступ слева й колонка
+$title-guest-process-pl: 2.75rem;//отступ слева й колонка
 $title-guest-process-pr: 1.15rem;//отступ слева й колонка
 $title-guest-time-pl: 1.15rem;//отступ слева й колонка
 $title-guest-time-pr: 1.15rem;//отступ слева й колонка
@@ -104,10 +105,12 @@ $title-guest-time-pr: 1.15rem;//отступ слева й колонка
 
   //calendar styling
   //styling callendar
-  .with_callendar,
+  .title-section, .title-section.with_callendar,
   .link_full_history {
+
     position: relative!important;
   }
+
   #ui-datepicker-div{
     background-color: #fff;
     box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.06) !important;
@@ -163,7 +166,19 @@ $title-guest-time-pr: 1.15rem;//отступ слева й колонка
       width: calc(66.66% - #{$title-guest-process-pr} - #{$title-guest-process-pl});
       margin: 0 $title-guest-process-pr;
     }
+
   }
+  .main-table .item .sub-item.-info.active{
+    display: flex!important;
+    opacity: 1;
+  }
+
+  .bottom-paginator {
+    font-size: 1.25rem;
+    padding-left: $title-guest-name-pl;
+    padding-right: $title-guest-time-pr;
+  }
+
 
 }
 
@@ -189,11 +204,12 @@ $title-guest-time-pr: 1.15rem;//отступ слева й колонка
   }
   .st-menu{
     visibility: visible;
+    width: $nav-panel-width-desktop;
   }
 
   ///main section
   .st-content{
-    width:calc(100% - #{$nav-panel-width});
+    width:calc(100% - #{$nav-panel-width-desktop});
     float: right;
   }
 }
@@ -204,8 +220,32 @@ $title-guest-time-pr: 1.15rem;//отступ слева й колонка
 .st-container{
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 1440px;
 }
+
+  .title-section, .title-section.with_callendar
+   {
+    font-size: $font_section_title;
+  }
+  .title-section .link_full_history{
+    font-size: 18px;
+}
+
+  .main-table .avatar-guest {
+      width: $av-guest-width;
+    height: $av-guest-width;
+  }
+
+  .d-xl-block{
+    display: block;
+  }
+
+  .sidebar .today-date {
+    font-size: $font_section_title;
+  }
+
+  .sidebar .tasks_title {
+    font-size: $font_section_title;}
 }
 
 //@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

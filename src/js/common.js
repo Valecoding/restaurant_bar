@@ -131,6 +131,22 @@ $(document).ready(function () {
   //     }
   // }
 
+    function toogleInfoBlock(itemToClick, itemToClickAddClass='', itemToToggle, itemToToggleAddClass = '') {
+        $(itemToClick).on('click', function () {
+            let item = $(this);
+            let itemInfo;
+            item.toggleClass(itemToClickAddClass);
+            itemInfo = item.children(itemToToggle);
+                // itemInfo.toggleClass(itemToToggleAddClass);
+               if(itemInfo.hasClass(itemToToggleAddClass)){
+                   itemInfo.hide().removeClass(itemToToggleAddClass);
+               } else {
+                   itemInfo.slideDown(200).css({'display':'flex'}).addClass(itemToToggleAddClass);
+               }
+        })
+    };
+    toogleInfoBlock('.main-table .item', '-info-block', '.sub-item.-info', 'active');
+
 });
 
 // todo    сделать проверку на меся 1й и последний, сделать дату справа что бы показывалась

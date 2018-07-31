@@ -1,0 +1,309 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  background-color: white;
+  height: 100%;
+  width: 100%; }
+
+.d-none {
+  display: none !important; }
+
+.d-mobil-none {
+  display: none; }
+
+.d-mobil-block {
+  display: block; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: hidden; }
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #4990e2; }
+
+a:focus, button:focus {
+  outline: none; }
+
+a:focus,
+a:hover {
+  color: blue; }
+
+body, .wrapper {
+  background-color: #f5f5f5; }
+
+.wrapper {
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden; }
+  .wrapper .container1 {
+    width: 100%;
+    height: 100%; }
+
+.wrapper .logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem; }
+
+.main-block {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
+
+.form-block {
+  margin: auto; }
+  .form-block .title {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 1rem; }
+  .form-block .form-group {
+    min-width: 280px;
+    max-width: 280px;
+    height: 250px;
+    margin: auto;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 3em 1.65em 2em; }
+    .form-block .form-group .email,
+    .form-block .form-group .password {
+      outline: none;
+      width: 100%;
+      height: 45px;
+      border-radius: 5px;
+      border: solid 1px rgba(151, 151, 151, 0.2);
+      margin-bottom: 1em;
+      color: #000;
+      font-size: 14px;
+      font-family: "Source Sans Pro", Arial, sans-serif;
+      font-weight: 600;
+      line-height: 45px;
+      padding-left: 0.8125em;
+      padding-right: 0.8125em; }
+    .form-block .form-group .input:focus, .form-block .form-group .input:focus {
+      border: solid 1px rgba(73, 144, 226, 0.64);
+      border-radius: 5px; }
+    .form-block .form-group .input::-webkit-input-placeholder {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400; }
+    .form-block .form-group .input:-ms-input-placeholder {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400; }
+    .form-block .form-group .input::-ms-input-placeholder {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400; }
+    .form-block .form-group .input::placeholder {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400; }
+    .form-block .form-group .input.pin::-webkit-input-placeholder {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      text-shadow: none;
+      position: relative;
+      top: 16px;
+      line-height: 1.2; }
+    .form-block .form-group .input.pin:-ms-input-placeholder {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      text-shadow: none;
+      position: relative;
+      top: 16px;
+      line-height: 1.2; }
+    .form-block .form-group .input.pin::-ms-input-placeholder {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      text-shadow: none;
+      position: relative;
+      top: 16px;
+      line-height: 1.2; }
+    .form-block .form-group .input.pin::placeholder {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.2);
+      font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+      font-weight: 400;
+      text-shadow: none;
+      position: relative;
+      top: 16px;
+      line-height: 1.2; }
+    .form-block .form-group .btn {
+      display: block;
+      border-radius: 5px;
+      background-color: transparent;
+      border: solid 1px rgba(151, 151, 151, 0.11);
+      font-size: 14px;
+      text-align: center;
+      height: 30px;
+      width: auto;
+      line-height: 30px; }
+    .form-block .form-group .btn:hover,
+    .form-block .form-group .btn:focus {
+      background-color: rgba(0, 0, 0, 0.3); }
+    .form-block .form-group .btn-submit {
+      width: 160px;
+      height: 45px;
+      line-height: 41px;
+      margin: auto;
+      margin-top: 7px; }
+    .form-block .form-group .btn-color-blue {
+      background-color: #4990e2;
+      color: #fff;
+      border: solid 1px rgba(151, 151, 151, 0.11); }
+      .form-block .form-group .btn-color-blue:hover, .form-block .form-group .btn-color-blue:focus {
+        background-color: blue; }
+
+.help_link {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  bottom: 1rem;
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+
+.main-tip {
+  display: block;
+  margin: auto;
+  padding: 20px 0;
+  text-align: center; }
+  .main-tip .title-tip {
+    margin-bottom: 21px;
+    width: 100%;
+    font-size: 18px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-weight: 600; }
+  .main-tip .text-tip {
+    width: 230px;
+    margin: auto;
+    font-size: 14px;
+    font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+    font-weight: 400;
+    line-height: 1.4; }
+
+.main-block.pinlogin .form-group {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.main-block.pinlogin .underline-link li {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 14px; }
+
+.main-block.pinlogin .underline-link li:first-child {
+  margin-top: 85px;
+  color: #4990e2;
+  opacity: 0.3;
+  margin-bottom: 0.25em; }
+
+.main-block .input.pin {
+  text-align: center;
+  font-size: 40px;
+  vertical-align: middle;
+  padding-bottom: 6px;
+  letter-spacing: 22px;
+  padding-left: 21px;
+  padding-right: 0;
+  color: transparent;
+  text-shadow: 0 0 0 black; }
+
+.main-block.pinlogin .input.pin {
+  background-color: transparent; }
+
+.main-block.newpin .input.pin {
+  margin-bottom: 1rem; }
+
+/*==========  Mobile First Method  ==========*/
+/* xs - устройства (до 576px) */
+/* CSS для ширины, которая меньше 575px (включительно) */
+/* sm-устройства (больше или равно 576px) */
+@media (min-width: 576px) {
+  /* CSS для: 576px <= ширины <= 767px */
+  .wrapper .logo {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 2rem; }
+  .d-mobil-none {
+    display: block; } }
+
+/* xs - устройства (до 600px) */
+/* CSS для ширины, которая меньше 599px (включительно) */
+/* sm-устройства (больше или равно 600px) */
+/*@media (min-width: 600px) {
+    !* CSS для: 600px <= ширины <= 767px *!
+
+  }*/
+/* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+  /* CSS для: 768px <= ширины <= 991px */
+  .main-tip {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    text-align: left; }
+  .main-block {
+    width: 636px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .main-tip .title-tip {
+    margin-bottom: 21px;
+    margin-top: 5em; }
+  .main-block.-two-el .form-block {
+    display: inline-block;
+    width: 50%; }
+  .main-block.-one-el .form-group {
+    display: block;
+    width: 50%; }
+  .main-tip .text-tip {
+    line-height: 1.4;
+    width: 230px;
+    margin-left: 0; } }
+
+/* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+  /* CSS для: 992px <= ширины <= 1119px */ }
+
+/* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+  /* CSS для: ширины >= 1200px */ }

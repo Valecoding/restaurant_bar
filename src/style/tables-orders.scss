@@ -43,8 +43,8 @@ $nav-mobile-top: 64px;
 
 $nav-panel-width: 280px;
 
-$av-guest-width: 35px; //avatar of guest width/height
-$av-width: 35px; //avatar of the user width/height
+$av-guest-width: 35px; //avatar of guest width/height<1200
+$av-width: 35px; //avatar of the user width/height<1200
 
 $font_section_title: 1.25rem;
 
@@ -198,15 +198,15 @@ $avatar_waiters_status_offline: red;
 
 
 //////restyling of order list history
-.history_orders{
+/*.history_orders{
   .bottom-paginator .link{
     text-align: center;
     margin: auto;
   }
-  .paginator{
-    display: none;
+  .paginator ul li{
+    display: inline-block;
   }
-}
+}*/ // проверить в основных стилях
 
 
 

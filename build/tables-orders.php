@@ -128,8 +128,7 @@
                         <span class="name-guest">Мила</span><br>
                         <span class="email-guest"><a href="mailto:mila@gmail.com">mila@gmail.com</a></span>
                     </div>
-                    <div class="col-5 process">
-                        Получил заказ
+                    <div class="col-5 process">Получил заказ
                     </div>
                     <div class="col-3 time">
                         27 минут назад
