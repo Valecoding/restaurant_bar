@@ -1,58 +1,48 @@
 @charset "UTF-8";
 .table-history-activity {
-    padding-top: 1.5rem;
-}
+  padding-top: 1.5rem; }
 
 .main-table .item:first-child .hr {
-    display: block;
-}
+  display: block; }
 
 .bottom-paginator a.load-more {
-    margin-left: 0;
-    margin-right: auto;
-}
+  margin-left: 0;
+  margin-right: auto; }
 
 .bottom-paginator .paginator li {
-    width: 1.5em;
-    display: inline-block;
-}
-
-.bottom-paginator .paginator li a {
+  width: 1.5em;
+  display: inline-block; }
+  .bottom-paginator .paginator li a {
     display: block;
-    text-align: center;
-}
+    text-align: center; }
+  .bottom-paginator .paginator li a.active {
+    color: #000; }
 
 .table-title {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 2em;
-}
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2em; }
 
 .title-section.with_callendar {
-    margin-bottom: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
+  margin-bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem; }
 
 .table-title .link_filter {
-    font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #4990e2;
-    padding-right: 2rem;
-    padding-left: 2rem;
-}
-
-.table-title .link_filter svg {
+  font-family: "Source Sans Pro", "Arial Narrow", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4990e2;
+  padding-right: 2rem;
+  padding-left: 2rem; }
+  .table-title .link_filter svg {
     width: 7px;
-    height: 8px;
-    opacity: 0.4;
-}
+    opacity: 0.4; }
 
 /*==========  Mobile First Method  ==========*/
 /* xs - устройства (до 576px) */
@@ -66,32 +56,24 @@
 /* CSS для ширины, которая меньше 599px (включительно) */
 /* sm-устройства (больше или равно 600px) */
 @media (min-width: 600px) {
-    /* CSS для: 600px <= ширины <= 767px */
-    .title-section.with_callendar {
-        padding-left: 2.75rem;
-        padding-right: 0.75rem;
-    }
-
-    .table-title .link_filter {
-        padding-right: 1.15rem;
-        padding-left: 2.25rem;
-    }
-}
+  /* CSS для: 600px <= ширины <= 767px */
+  .title-section.with_callendar {
+    padding-left: 2.75rem;
+    padding-right: 0.75rem; }
+  .table-title .link_filter {
+    padding-right: 1.15rem;
+    padding-left: 2.25rem; } }
 
 /* md-устройства (больше или равно 768px) */
 @media (min-width: 768px) {
-    /* CSS для: 768px <= ширины <= 991px */
-}
+  /* CSS для: 768px <= ширины <= 991px */ }
 
 /* lg-устройства (больше или равно 992px) */
 @media (min-width: 992px) {
-    /* CSS для: 992px <= ширины <= 1119px */
-    .table-history-activity {
-        padding-top: 3.5rem;
-    }
-}
+  /* CSS для: 992px <= ширины <= 1119px */
+  .table-history-activity {
+    padding-top: 3.5rem; } }
 
 /* xl-устройства (больше или равно 1200px) */
 @media (min-width: 1200px) {
-    /* CSS для: ширины >= 1200px */
-}
+  /* CSS для: ширины >= 1200px */ }

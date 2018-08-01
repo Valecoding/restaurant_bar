@@ -79,6 +79,9 @@ $title-guest-time-pr: 2rem; //отступ слева й колонка
       display: block;
       text-align: center;
     }
+    a.active{
+       color: $black;
+     }
   }
 }
 .table-title{

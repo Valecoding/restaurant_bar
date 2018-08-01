@@ -1,5 +1,4 @@
 <?php require "includes/header.php"; ?>
-<!--todo в данном файле сверсать основыне элементы 2) исправить историю 3) подправить выпадающий календарьстрелку добавить тень на стрелку-->
 
 <!--    Start of the container in the nav-left.html-->
 <?php require "includes/nav-left.html"; ?>
@@ -268,7 +267,7 @@
                             </i></label><input id="datepicker" type="text" hidden><!--</form>--><span
                                 class="date d-none">6&nbsp;июля</span>
                     </div>
-                    <div class="title-section-link link_full_history"><a href="#">Полная история активности</a></div>
+                    <div class="title-section-link link_full_history"><a href="dashboard-history.php">Полная история активности</a></div>
                 </div>
             </div>
 
